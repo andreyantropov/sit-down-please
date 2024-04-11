@@ -14,20 +14,24 @@ html(lang="ru")
               svg.icon.icon-phone(width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg")
                 use(xlink:href="img/sprite.svg#phone")
               span.phone-number +7 (495) 885-45-47
+
           .nav.header__nav.header__nav_top.nav
             - var navigation = [{ title: "О Компании", href: "#" }, { title: "Гарантия и возврат", href: "#" }, { title: "Корпоративным клиентам", href: "#" }, { title: "Дизайн-решение", href: "#" }]
             ul.nav__list.list-reset
               each nav in navigation 
                 li.nav__item 
                   a.nav__link(href=nav.href) #{nav.title}
+
           a.header__logo 
             img(src="img/logo.png" alt="SitDownPls")
+
           .nav.header__nav.header__nav_bottom.nav
             - var navigation = [{ title: "Каталог", href: "#" }, { title: "Магазины", href: "#" }, { title: "Шоурум", href: "#" }, { title: "Доставка и оплата", href: "#" }, { title: "Дисконт", href: "#" }, { title: "Контакты", href: "#" }]
             ul.nav__list.list-reset
               each nav in navigation 
                 li.nav__item 
                   a.nav__link(href=nav.href) #{nav.title}
+
           form.header__form.search(action="#" method="get") 
             .search__input.input
               label.input__label.hidden(for="search") Поиск по сайту:
@@ -35,6 +39,7 @@ html(lang="ru")
             button.search__btn.btn-reset(type="submit")
               svg.icon.arrow-icon(width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg")
                 use(xlink:href="img/sprite.svg#arrow")
+
           .header__user.user 
             a.user__account(href="#")
               svg.icon.user-icon(width="26" height="28" viewBox="0 0 26 28" fill="none" xmlns="http://www.w3.org/2000/svg")
@@ -42,13 +47,39 @@ html(lang="ru")
             a.user__cart(href="#")
               svg.icon.user-icon(width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg")
                 use(xlink:href="img/sprite.svg#cart")
+
           .header__breadcrumbs.breadcrumbs
             - var navigation = [{ title: "Главная", href: "#" }, { title: "Каталог", href: "#" }, { title: "Диваны", href: "#" }, { title: "Прямые диваны", href: "#" }]
             ul.breadcrumbs__list.list-reset 
               each nav in navigation 
                 li.breadcrumbs__item 
                   a.breadcrumbs__link(href=nav.href) #{nav.title}
-    main.main 
+    main.main
+      article.ad 
+        .ad__container.container 
+          .ad__wrapper.wrapper 
+            h3.ad__title Скидка&nbsp;15% на&nbsp;первую покупку
+            button.ad__btn.btn-reset Получить!
+
+      section.offers 
+        .offers__container.container 
+          .offers__wrapper.wrapper
+            h2.offers__title.title Специальные предложения
+            - var cards = [{ srcLg: "img/home/offers/offer-1-lg.webp", srcMd: "img/home/offers/offer-1-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/offers/offer-1-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/offers/offer-1-xs.webp", mediaXs: "(max-width: 576px)", name: "Кресло велюровое \"X-24\"", price: "15 990 руб", oldPrice: "24 990 руб", sale: "- 9000" }, { srcLg: "img/home/offers/offer-2-lg.webp", srcMd: "img/home/offers/offer-2-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/offers/offer-2-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/offers/offer-2-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван тканевый \"Z-44\"", price: "22 990 руб", oldPrice: "32 990 руб", sale: "- 10 000" }, { srcLg: "img/home/offers/offer-3-lg.webp", srcMd: "img/home/offers/offer-3-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/offers/offer-3-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/offers/offer-3-xs.webp", mediaXs: "(max-width: 576px)", name: "Будильник  \"Quartz-23\"", price: "1 290 руб", oldPrice: "1 890 руб", sale: "- 600" }, { srcLg: "img/home/offers/offer-4-lg.webp", srcMd: "img/home/offers/offer-4-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/offers/offer-4-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/offers/offer-4-xs.webp", mediaXs: "(max-width: 576px)", name: "Мини-скульптура \"Oh my deer\"", price: "15 990 руб", oldPrice: "990 руб", sale: "- 300" }, { srcLg: "img/home/offers/offer-5-lg.webp", srcMd: "img/home/offers/offer-5-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/offers/offer-5-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/offers/offer-5-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван вел-флок \"Z-85\"", price: "22 990 руб", oldPrice: "32 990 руб", sale: "- 10 000" }, { srcLg: "img/home/offers/offer-6-lg.webp", srcMd: "img/home/offers/offer-6-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/offers/offer-6-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/offers/offer-6-xs.webp", mediaXs: "(max-width: 576px)", name: "Термометр + гидрометр \"H-18\"", price: "1 390 руб", oldPrice: "2 090 руб", sale: "- 700" }]
+            ul.offers__list.list-reset
+              each card in cards 
+                li.offers__item
+                  article.offers__card.offer
+                    span.offer__sale #{card.sale}
+                    picture.offer__pic 
+                      source(srcset=card.srcXs, media=card.mediaXs)
+                      source(srcset=card.srcSm, media=card.mediaSm)
+                      source(srcset=card.srcMd, media=card.mediaMd)
+                      img.work__img(src=card.srcLg, alt="Изображение товара")
+                    h3.offer__title.subtitle #{card.name} 
+                    span.offer__price #{card.price}
+                    del.offer__price.offer__price_old #{card.oldPrice}
+                    button.offer__btn.btn-reset Купить
     footer.footer
       .footer__container.container
         .footer__wrapper.wrapper
