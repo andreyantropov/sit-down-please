@@ -13,7 +13,7 @@ html(lang="ru")
             a.address__phone(href="tel:+74958854547") 
               svg.icon.icon-phone(width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg")
                 use(xlink:href="img/sprite.svg#phone")
-              span.phone-number +7 (495) 885-45-47
+              span +7 (495) 885-45-47
 
           .nav.header__nav.header__nav_top.nav
             - var navigation = [{ title: "О Компании", href: "#" }, { title: "Гарантия и возврат", href: "#" }, { title: "Корпоративным клиентам", href: "#" }, { title: "Дизайн-решение", href: "#" }]
@@ -55,7 +55,7 @@ html(lang="ru")
                 li.breadcrumbs__item 
                   a.breadcrumbs__link(href=nav.href) #{nav.title}
     main.main
-      article.ad 
+      article.ad.ad_first 
         .ad__container.container 
           .ad__wrapper.wrapper 
             h3.ad__title Скидка&nbsp;15% на&nbsp;первую покупку
@@ -95,11 +95,42 @@ html(lang="ru")
                       source(srcset=card.srcXs, media=card.mediaXs)
                       source(srcset=card.srcSm, media=card.mediaSm)
                       source(srcset=card.srcMd, media=card.mediaMd)
-                      img.work__img(src=card.srcLg, alt="Изображение товара")
+                      img.product__img(src=card.srcLg, alt="Изображение товара")
                     h3.product__title.subtitle #{card.name} 
                     span.product__price #{card.price}
                     del.product__price.product__price_old #{card.oldPrice}
                     button.product__btn.btn-reset Купить
+
+      article.ad.ad_second 
+        .ad__container.container 
+          .ad__wrapper.wrapper 
+            h3.ad__title Оксфорд 1950
+            p.ad__desc Новая коллекция изысканных кресел
+            button.ad__btn.btn-reset Ознакомиться
+
+      section.categories 
+        .categories__container.container 
+          .categories__wrapper.wrapper 
+            h2.categories__title.title
+            - var cards = [{ srcLg: "img/home/categories/category-1-lg.webp", srcMd: "img/home/categories/category-1-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/categories/category-1-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/categories/category-1-xs.webp", mediaXs: "(max-width: 576px)", name: "Диваны", subcategories: [{ name: "Прямые" }, { name: "Угловатые" }, { name: "Модульные" }] }, { srcLg: "img/home/categories/category-2-lg.webp", srcMd: "img/home/categories/category-2-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/categories/category-2-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/categories/category-2-xs.webp", mediaXs: "(max-width: 576px)", name: "Кресла", subcategories: [{ name: "Мягкие" }, { name: "Кресла-кровати" }] }, { srcLg: "img/home/categories/category-3-lg.webp", srcMd: "img/home/categories/category-3-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/categories/category-3-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/categories/category-3-xs.webp", mediaXs: "(max-width: 576px)", name: "Кровати", subcategories: [{ name: "Односпальные" }, { name: "Двуспальные" }] }, { srcLg: "img/home/categories/category-4-lg.webp", srcMd: "img/home/categories/category-4-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/categories/category-4-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/categories/category-4-xs.webp", mediaXs: "(max-width: 576px)", name: "Тумбы и комоды", subcategories: [{ name: "Тумбы" }, { name: "Комоды" }] }, { srcLg: "img/home/categories/category-5-lg.webp", srcMd: "img/home/categories/category-5-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/categories/category-5-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/categories/category-5-xs.webp", mediaXs: "(max-width: 576px)", name: "Стулья", subcategories: [{ name: "Деревянные" }, { name: "Металлокаркас" }] }]
+            ul.categories__list.list-reset
+              each card in cards 
+                li.categories__item
+                  article.categories__card.category
+                    ul.subcategories__list 
+                      each subcategory in card.subcategories
+                        li.subcategories__item #{subcategory.name}
+                    picture.category__pic 
+                      source(srcset=card.srcXs, media=card.mediaXs)
+                      source(srcset=card.srcSm, media=card.mediaSm)
+                      source(srcset=card.srcMd, media=card.mediaMd)
+                      img.category__img(src=card.srcLg, alt="Изображение товара")
+                    h3.category__title.subtitle #{card.name} 
+                    button.category__btn.btn-reset 
+                      span В&nbsp;Каталог
+                      svg.icon.arrow-icon(width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        use(xlink:href="img/sprite.svg#arrow")
+
     footer.footer
       .footer__container.container
         .footer__wrapper.wrapper
