@@ -88,7 +88,7 @@ html(lang="ru")
             - var cards = [{ srcLg: "img/home/rated/rated-1-lg.webp", srcMd: "img/home/rated/rated-1-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/rated/rated-1-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/rated/rated-1-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван кожаный \"R-94\"", price: "94 990 руб", rating: "5.0" }, { srcLg: "img/home/rated/rated-2-lg.webp", srcMd: "img/home/rated/rated-2-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/rated/rated-2-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/rated/rated-2-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван апартековый \"T-75\"", price: "69 990 руб", rating: "4.9" }, { srcLg: "img/home/rated/rated-3-lg.webp", srcMd: "img/home/rated/rated-3-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/rated/rated-3-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/rated/rated-3-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван тканевый \"D-31\"", price: "28 490 руб", rating: "4.8" }, { srcLg: "img/home/rated/rated-4-lg.webp", srcMd: "img/home/rated/rated-4-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/rated/rated-4-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/rated/rated-4-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван велюровый \"Y-68\"", price: "22 990 руб", rating: "4.8" }, { srcLg: "img/home/rated/rated-5-lg.webp", srcMd: "img/home/rated/rated-5-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/rated/rated-5-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/rated/rated-5-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван из шинила \"W-95\"", price: "22 990 руб", rating: "4.8" }, { srcLg: "img/home/rated/rated-6-lg.webp", srcMd: "img/home/rated/rated-6-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/rated/rated-6-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/rated/rated-6-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван флоковый \"G-41\"", price: "17 990 руб", rating: "4.8" }, { srcLg: "img/home/rated/rated-7-lg.webp", srcMd: "img/home/rated/rated-7-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/rated/rated-7-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/rated/rated-7-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван шиниловый \"V-43\"", price: "19 990 руб", rating: "4.8" }, { srcLg: "img/home/rated/rated-8-lg.webp", srcMd: "img/home/rated/rated-8-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/rated/rated-8-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/rated/rated-8-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван велюровый \"S-99\"", price: "19 990 руб", rating: "4.7" }]
             ul.rated__list.list-reset
               each card in cards 
-                li.offers__item
+                li.rated__item
                   article.rated__card.product
                     span.product__reting #{card.rating}
                     picture.product__pic 
@@ -124,13 +124,29 @@ html(lang="ru")
                       source(srcset=card.srcXs, media=card.mediaXs)
                       source(srcset=card.srcSm, media=card.mediaSm)
                       source(srcset=card.srcMd, media=card.mediaMd)
-                      img.category__img(src=card.srcLg, alt="Изображение товара")
+                      img.category__img(src=card.srcLg, alt="Пример товара из категории")
                     h3.category__title.subtitle #{card.name} 
                     button.category__btn.btn-reset 
                       span В&nbsp;Каталог
                       svg.icon.arrow-icon(width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg")
                         use(xlink:href="img/sprite.svg#arrow")
 
+      section.useful 
+        .useful__container.container 
+          .useful__wrapper.wrapper 
+            h2.useful__title.title Полезное
+            - var cards = [{ srcLg: "img/home/useful/useful-1-lg.webp", srcMd: "img/home/useful/useful-1-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/useful/useful-1-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/useful/useful-1-xs.webp", mediaXs: "(max-width: 576px)", desc: "И нет сомнений, что сделанные на базе интернет-аналитики выводы представляют собой не что иное?"}, { srcLg: "img/home/useful/useful-2-lg.webp", srcMd: "img/home/useful/useful-2-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/useful/useful-2-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/useful/useful-2-xs.webp", mediaXs: "(max-width: 576px)", desc: "Как принято считать, некоторые особенности приносят несомненную пользу обществу?"}, { srcLg: "img/home/useful/useful-3-lg.webp", srcMd: "img/home/useful/useful-3-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/useful/useful-3-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/useful/useful-3-xs.webp", mediaXs: "(max-width: 576px)", desc: "Ясность нашей позиции очевидна: укрепление и развитие внутренней структуры?"}, { srcLg: "img/home/useful/useful-4-lg.webp", srcMd: "img/home/useful/useful-4-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/useful/useful-4-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/useful/useful-4-xs.webp", mediaXs: "(max-width: 576px)", desc: "Прежде всего, консультация с широким активом однозначно фиксирует необходимость распределения?"}, { srcLg: "img/home/useful/useful-5-lg.webp", srcMd: "img/home/useful/useful-5-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/useful/useful-5-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/useful/useful-5-xs.webp", mediaXs: "(max-width: 576px)", desc: "Как принято считать, некоторые особенности приносят несомненную пользу обществу?"}]
+            ul.useful__list.list-reset
+              each card in cards 
+                li.useful__item
+                  div.useful__card.topic
+                    picture.topic__pic 
+                      source(srcset=card.srcXs, media=card.mediaXs)
+                      source(srcset=card.srcSm, media=card.mediaSm)
+                      source(srcset=card.srcMd, media=card.mediaMd)
+                      img.topic__img(src=card.srcLg, alt="" aria-hidden="true")
+                    p.topic__desc #{card.desc}
+                    button.topic__btn.btn-reset Читать
     footer.footer
       .footer__container.container
         .footer__wrapper.wrapper
