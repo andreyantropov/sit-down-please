@@ -179,3 +179,27 @@ html(lang="ru")
     footer.footer
       .footer__container.container
         .footer__wrapper.wrapper
+          .footer__column.footer__column_brand 
+            a.footer__logo.logo(href="#")
+              img(src="img/logo.png" alt="Логотип SitDownPls")
+            .footer__socials.socials
+              a.socials__link(href="#" aria-label="Мы в Одноклассниках")
+                svg.icon.icon-ok(width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg")
+                  use(xlink:href="img/sprite.svg#ok")
+              a.socials__link(href="#" aria-label="Мы во Вконтакте")
+                svg.icon.icon-vk(width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg")
+                  use(xlink:href="img/sprite.svg#vk")
+          
+          .footer__column.footer__column_info.information
+            - var information = [{ name: "О нас", items: [{ name: "О компании" }, { name: "Блог" }] }, { name: "Услуги", items: [{ name: "Доставка" }, { name: "Рассрочка и кредит" }, { name: "Сборка и установка" }] }, { name: "Связь с нами", items: [{name: "Обратная связь"}, { name: "Контакты" }] }, { name: "Сотрудничество", items: [{ name: "Поставщикам" }, { name: "Оптовикам" }, { name: "Карьера" }] }]
+            ul.information__list.list-reset
+              each info in information
+                li.information__category
+                  h4.information__title #{info.name}
+                  ul.information__items-list.list-reset
+                    each item in info.items
+                      li.information__item
+                        a.information__link #{item.name}
+          span.footer__copy SDP<sup class="reg">&reg;</sup> 2011-2021
+
+          
