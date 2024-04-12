@@ -2,9 +2,13 @@ doctype html
 html(lang="ru")
   head
     meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    link(rel="shortcut icon", href="favicon.svg", type="image/x-icon")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="shortcut icon" href="favicon.svg" type="image/x-icon")
     title SitDownPls
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap")
+    link(rel="stylesheet", href="css/main.css")
   body 
     header.header
       .header__container.container
@@ -35,7 +39,7 @@ html(lang="ru")
           form.header__form.search(action="#" method="get") 
             .search__input.input
               label.input__label.hidden(for="search") Поиск по сайту:
-              input.input__control(type="text" id="search" name="search" placeholder="Я хочу найти...")
+              input.input__control.search-decoration(type="text" id="search" name="search" placeholder="Я хочу найти...")
             button.search__btn.btn-reset(type="submit")
               svg.icon.arrow-icon(width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg")
                 use(xlink:href="img/sprite.svg#arrow")
