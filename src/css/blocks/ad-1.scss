@@ -1,0 +1,18 @@
+.ad_first {
+    background-image: url('../img/home/ad/ad-1-lg.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .ad__wrapper {
+        padding: 100px 0;
+    }
+
+    .ad__title {
+        margin: 0;
+        margin-bottom: 50px;
+        max-width: 500px;
+        font-size: 48px;
+        font-weight: 700;
+        color: $text-grey-color;
+    }
+}

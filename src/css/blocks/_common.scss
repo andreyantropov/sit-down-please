@@ -56,14 +56,18 @@ body {
     padding: 22px 47px;
     border: 2px solid $primary-color;
     border-radius: 10px;
-    background-color: $primary-color;
+    font-size: 16px;
+    font-weight: 700;
     color: $text-light-color;
+    background-color: $primary-color;
 }
 
 .outlined-btn {
     padding: 19px 35px;
     border: 2px solid $primary-color;
     border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
     color: $primary-color;
 }
 
