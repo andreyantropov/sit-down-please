@@ -27,6 +27,7 @@
 @mixin card {
   position: relative;
   padding: 30px;
+  border-radius: 10px;
   background-color: $background-grey-color;
 }
 

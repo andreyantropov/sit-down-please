@@ -1,0 +1,43 @@
+.useful {
+  &__list {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__item_3,
+  &__item_4,
+  &__item_5 {
+    display: none;
+  }
+}
+
+.topic {
+  @include card();
+  padding-top: 450px;
+  padding-bottom: 100px;
+  min-height: 676px;
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  &__desc {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 400;
+    color: $text-dark-color;
+  }
+
+  &__btn {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+  }
+}
+
+.topic-decoration-1 {
+  background-image: url('../img/home/useful/useful-1-lg.webp');
+}
+
+.topic-decoration-2 {
+  background-image: url('../img/home/useful/useful-2-lg.webp');
+}

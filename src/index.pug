@@ -155,18 +155,13 @@ html(lang="ru")
         .useful__container.container
           .useful__wrapper.wrapper
             h2.useful__title.title Полезное
-            - var cards = [{ srcLg: "img/home/useful/useful-1-lg.webp", srcMd: "img/home/useful/useful-1-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/useful/useful-1-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/useful/useful-1-xs.webp", mediaXs: "(max-width: 576px)", desc: "И нет сомнений, что сделанные на базе интернет-аналитики выводы представляют собой не что иное?"}, { srcLg: "img/home/useful/useful-2-lg.webp", srcMd: "img/home/useful/useful-2-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/useful/useful-2-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/useful/useful-2-xs.webp", mediaXs: "(max-width: 576px)", desc: "Как принято считать, некоторые особенности приносят несомненную пользу обществу?"}, { srcLg: "img/home/useful/useful-3-lg.webp", srcMd: "img/home/useful/useful-3-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/useful/useful-3-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/useful/useful-3-xs.webp", mediaXs: "(max-width: 576px)", desc: "Ясность нашей позиции очевидна: укрепление и развитие внутренней структуры?"}, { srcLg: "img/home/useful/useful-4-lg.webp", srcMd: "img/home/useful/useful-4-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/useful/useful-4-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/useful/useful-4-xs.webp", mediaXs: "(max-width: 576px)", desc: "Прежде всего, консультация с широким активом однозначно фиксирует необходимость распределения?"}, { srcLg: "img/home/useful/useful-5-lg.webp", srcMd: "img/home/useful/useful-5-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/useful/useful-5-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/useful/useful-5-xs.webp", mediaXs: "(max-width: 576px)", desc: "Как принято считать, некоторые особенности приносят несомненную пользу обществу?"}]
+            - var cards = [{ desc: "И нет сомнений, что сделанные на базе интернет-аналитики выводы представляют собой не что иное?"}, { desc: "Как принято считать, некоторые особенности приносят несомненную пользу обществу?"}, { desc: "Ясность нашей позиции очевидна: укрепление и развитие внутренней структуры?"}, { desc: "Прежде всего, консультация с широким активом однозначно фиксирует необходимость распределения?"}, { desc: "Как принято считать, некоторые особенности приносят несомненную пользу обществу?"}]
             ul.useful__list.list-reset
-              each card in cards
-                li.useful__item
-                  div.useful__card.topic
-                    picture.topic__pic
-                      source(srcset=card.srcXs, media=card.mediaXs)
-                      source(srcset=card.srcSm, media=card.mediaSm)
-                      source(srcset=card.srcMd, media=card.mediaMd)
-                      img.topic__img(src=card.srcLg, alt="" aria-hidden="true")
+              each card, index in cards
+                li.useful__item(class=`useful__item_${index + 1}`)
+                  div.useful__card.topic(class=`topic-decoration-${index + 1}`)
                     p.topic__desc #{card.desc}
-                    button.topic__btn.btn-reset Читать
+                    button.topic__btn.btn-reset.outline-btn Читать
 
       section.subscription.section
         .subscription__container.container
