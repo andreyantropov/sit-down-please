@@ -8,7 +8,8 @@ html(lang="ru")
     link(rel="preconnect" href="https://fonts.googleapis.com")
     link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
     link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap")
-    link(rel="stylesheet", href="css/main.css")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap")
+    link(rel="stylesheet" href="css/main.css")
   body
     header.header
       .header__container.container
@@ -125,7 +126,7 @@ html(lang="ru")
           .ad__wrapper.wrapper
             h3.ad__title Оксфорд 1950
             p.ad__desc Новая коллекция изысканных кресел
-            button.ad__btn.btn-reset Ознакомиться
+            button.ad__btn.btn-reset.primary-btn Ознакомиться
 
       section.categories.section
         .categories__container.container
@@ -133,18 +134,18 @@ html(lang="ru")
             h2.categories__title.title
             - var cards = [{ srcLg: "img/home/categories/category-1-lg.webp", srcMd: "img/home/categories/category-1-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/categories/category-1-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/categories/category-1-xs.webp", mediaXs: "(max-width: 576px)", name: "Диваны", subcategories: [{ name: "Прямые" }, { name: "Угловатые" }, { name: "Модульные" }] }, { srcLg: "img/home/categories/category-2-lg.webp", srcMd: "img/home/categories/category-2-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/categories/category-2-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/categories/category-2-xs.webp", mediaXs: "(max-width: 576px)", name: "Кресла", subcategories: [{ name: "Мягкие" }, { name: "Кресла-кровати" }] }, { srcLg: "img/home/categories/category-3-lg.webp", srcMd: "img/home/categories/category-3-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/categories/category-3-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/categories/category-3-xs.webp", mediaXs: "(max-width: 576px)", name: "Кровати", subcategories: [{ name: "Односпальные" }, { name: "Двуспальные" }] }, { srcLg: "img/home/categories/category-4-lg.webp", srcMd: "img/home/categories/category-4-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/categories/category-4-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/categories/category-4-xs.webp", mediaXs: "(max-width: 576px)", name: "Тумбы и комоды", subcategories: [{ name: "Тумбы" }, { name: "Комоды" }] }, { srcLg: "img/home/categories/category-5-lg.webp", srcMd: "img/home/categories/category-5-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/categories/category-5-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/categories/category-5-xs.webp", mediaXs: "(max-width: 576px)", name: "Стулья", subcategories: [{ name: "Деревянные" }, { name: "Металлокаркас" }] }]
             ul.categories__list.list-reset
-              each card in cards
-                li.categories__item
+              each card, index in cards
+                li.categories__item(class=`categories__item_${index + 1}`)
                   article.categories__card.category
-                    ul.subcategories__list
+                    ul.category__list.list-reset
                       each subcategory in card.subcategories
-                        li.subcategories__item #{subcategory.name}
+                        li.category__item #{subcategory.name}
+                    h3.category__title #{card.name}
                     picture.category__pic
                       source(srcset=card.srcXs, media=card.mediaXs)
                       source(srcset=card.srcSm, media=card.mediaSm)
                       source(srcset=card.srcMd, media=card.mediaMd)
                       img.category__img(src=card.srcLg, alt="Пример товара из категории")
-                    h3.category__title #{card.name}
                     button.category__btn.btn-reset
                       span В&nbsp;Каталог
                       svg.icon.arrow-icon(width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg")

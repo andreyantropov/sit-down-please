@@ -1,10 +1,9 @@
 .ad_first {
+    @include ad();
     background-image: url('../img/home/ad/ad-1-lg.webp');
-    background-size: cover;
-    background-repeat: no-repeat;
 
     .ad__wrapper {
-        padding: 100px 0;
+      @include adWrapper();
     }
 
     .ad__title {

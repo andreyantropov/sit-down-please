@@ -9,6 +9,15 @@
     }
 }
 
+@mixin ad {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin adWrapper {
+  padding: 100px 0;
+}
+
 @mixin cardList {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

@@ -1,0 +1,27 @@
+.ad_second {
+  @include ad();
+  background-image: url('../img/home/ad/ad-2-lg.webp');
+
+  .ad__wrapper {
+    @include adWrapper();
+  }
+
+  .ad__title {
+      margin: 0;
+      margin-bottom: 10px;
+      font-family: $third-family;
+      font-size: 60px;
+      font-weight: 900;
+      line-height: 120%;
+      color: $ad-title-color;
+  }
+
+  .ad__desc {
+    margin: 0;
+    margin-bottom: 30px;
+    max-width: 510px;
+    font-size: 48px;
+    font-weight: 400;
+    color: $text-light-color;
+  }
+}
