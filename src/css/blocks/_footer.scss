@@ -26,6 +26,7 @@
   }
 
   &__logo {
+    display: inline-block;
     margin-bottom: 30px;
   }
 
@@ -33,24 +34,42 @@
     display: flex;
     gap: 15px;
   }
-}
 
-.information {
-  &__list {
-    display: grid;
-    gap: 100px;
-    grid-template-columns: repeat(4, 1fr);
+  .nav {
+    &__list {
+      display: grid;
+      gap: 100px;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__title {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 400;
+      color: $text-dark-color;
+    }
+
+    &__link {
+      font-size: 14px;
+      font-weight: 400;
+      color: $text-grey-color;
+
+      &:focus {
+        color: $primary-color;
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: $primary-color;
+          background-color: $primary-light-color;
+        }
+      }
+
+      &:active {
+        color: $primary-dark-color;
+        background-color: transparent;
+      }
+    }
   }
 
-  &__title {
-    font-size: 16px;
-    font-weight: 400;
-    color: $text-dark-color;
-  }
-
-  &__link {
-    font-size: 14px;
-    font-weight: 400;
-    color: $text-grey-color;
-  }
 }

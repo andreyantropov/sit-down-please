@@ -139,7 +139,8 @@ html(lang="ru")
                   article.categories__card.category
                     ul.category__list.list-reset
                       each subcategory in card.subcategories
-                        li.category__item #{subcategory.name}
+                        li.category__item
+                          a.category__link(href="#")  #{subcategory.name}
                     h3.category__title #{card.name}
                     picture.category__pic
                       source(srcset=card.srcXs, media=card.mediaXs)
@@ -206,14 +207,15 @@ html(lang="ru")
                 svg.icon.icon-vk(width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg")
                   use(xlink:href="img/sprite.svg#vk")
 
-          .footer__column.footer__column_info.information
-            - var information = [{ name: "О нас", items: [{ name: "О компании" }, { name: "Блог" }] }, { name: "Услуги", items: [{ name: "Доставка" }, { name: "Рассрочка и кредит" }, { name: "Сборка и установка" }] }, { name: "Связь с нами", items: [{name: "Обратная связь"}, { name: "Контакты" }] }, { name: "Сотрудничество", items: [{ name: "Поставщикам" }, { name: "Оптовикам" }, { name: "Карьера" }] }]
-            ul.information__list.list-reset
-              each info in information
-                li.information__category
-                  h4.information__title #{info.name}
-                  ul.information__items-list.list-reset
-                    each item in info.items
-                      li.information__item
-                        a.information__link #{item.name}
+          .footer__column.footer__column_nav.information
+            nav.footer__nav.nav
+              - var information = [{ name: "О нас", items: [{ name: "О компании" }, { name: "Блог" }] }, { name: "Услуги", items: [{ name: "Доставка" }, { name: "Рассрочка и кредит" }, { name: "Сборка и установка" }] }, { name: "Связь с нами", items: [{name: "Обратная связь"}, { name: "Контакты" }] }, { name: "Сотрудничество", items: [{ name: "Поставщикам" }, { name: "Оптовикам" }, { name: "Карьера" }] }]
+              ul.nav__list.list-reset
+                each info in information
+                  li.nav__category
+                    h4.nav__title #{info.name}
+                    ul.nav__items-list.list-reset
+                      each item in info.items
+                        li.nav__item
+                          a.nav__link(href="#")  #{item.name}
 

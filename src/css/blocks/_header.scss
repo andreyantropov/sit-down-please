@@ -11,7 +11,7 @@
             "logo logo . nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom"
             "form form form form form form form form form form user user"
             "breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs";
-        
+
         &::before {
             content: '';
             position: absolute;
@@ -74,12 +74,45 @@
             display: inline-block;
             padding: 2px 5px;
             color: $text-dark-color;
+            transition: color 0.3s, background-color 0.3s;
+
+            &:focus {
+              color: $primary-color;
+            }
+
+            @media (any-hover: hover) {
+              &:hover {
+                color: $primary-color;
+                background-color: $primary-light-color;
+              }
+            }
+
+            &:active {
+              color: $primary-dark-color;
+              background-color: transparent;
+            }
         }
     }
 
     .header__nav_top {
         .nav__link {
             color: $text-grey-color;
+
+            &:focus {
+              color: $primary-color;
+            }
+
+            @media (any-hover: hover) {
+              &:hover {
+                color: $primary-color;
+                background-color: $primary-light-color;
+              }
+            }
+
+            &:active {
+              color: $primary-dark-color;
+              background-color: transparent;
+            }
         }
     }
 

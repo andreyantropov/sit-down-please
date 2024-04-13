@@ -70,6 +70,30 @@ body {
     font-weight: 700;
     color: $text-light-color;
     background-color: $primary-color;
+    transition: border 0.3s, color 0.3s, background-color 0.3s;
+
+    &:focus {
+      border: 2px solid $primary-light-color;
+      background-color: $primary-light-color;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        border: 2px solid $primary-dark-color;
+        background-color: $primary-light-color;
+      }
+    }
+
+    &:active {
+      border: 2px solid $primary-dark-color;
+      background-color: $primary-dark-color;
+    }
+
+    &:disabled {
+      border: 2px solid $background-dark-grey-color;
+      color: $text-grey-color;
+      background-color: $background-dark-grey-color;
+    }
 }
 
 .outline-btn {
@@ -80,6 +104,24 @@ body {
     font-size: 16px;
     font-weight: 600;
     color: $primary-color;
+    transition: border 0.3s, color 0.3s, background-color 0.3s;
+
+    &:focus {
+      color: $text-light-color;
+      background-color: $primary-color;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $text-light-color;
+        background-color: $primary-light-color;
+      }
+    }
+
+    &:active {
+      border: 2px solid $primary-dark-color;
+      background-color: $primary-dark-color;
+    }
 }
 
 .hidden {
@@ -99,7 +141,7 @@ body {
 
     &__control {
         padding: 15px 23px;
-        border: none;
+        border: 2px solid $background-grey-color;
         border-radius: 10px;
         width: 100%;
         height: 50px;
@@ -107,9 +149,33 @@ body {
         font-weight: 400;
         font-size: 16px;
         line-height: 120%;
-        color: $text-grey-color;
+        color: $text-dark-color;
         background: $background-grey-color;
         transition: border 0.3s, color 0.3s, background-color 0.3s;
+
+        &:focus {
+          border: 2px solid $background-dark-grey-color;
+          outline: none;
+          background-color: $background-dark-grey-color;
+        }
+
+        @media (any-hover: hover) {
+          &:hover {
+            border: 2px solid $primary-color;
+            outline: none;
+            background-color: $primary-lighter-color;
+          }
+        }
+
+        &:active {
+          border: 2px solid $background-grey-color;
+          outline: none;
+          background: $background-grey-color;
+        }
+
+        &::placeholder {
+          color: $text-grey-color;
+        }
     }
 
     &_checkbox {
@@ -161,9 +227,8 @@ body {
       top: 50%;
       width: 13px;
       height: 14px;
-      border: 1px solid $primary-color;
+      border: 1px solid $text-grey-color;
       border-radius: 2px;
-      background-color: $primary-color;
       transform: translateY(-50%);
     }
 
@@ -187,16 +252,44 @@ body {
     &__link {
       position: relative;
       color: $primary-color;
-    }
+      transition: color 0.3s;
 
-    &__link::after {
-      content: '';
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      height: 1px;
-      background-color: $primary-color;
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 1px;
+        background-color: $primary-color;
+        transition: background-color 0.3s;
+      }
+
+      &:focus {
+        color: $primary-light-color;
+      }
+
+      &:focus::after {
+        background-color: $primary-light-color;
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: $primary-light-color;
+        }
+
+        &:hover::after {
+          background-color: $primary-color;
+        }
+      }
+
+      &:active {
+        color: $primary-dark-color;
+      }
+
+      &:active::after {
+        background-color: $primary-dark-color;
+      }
     }
 }
 
