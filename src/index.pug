@@ -109,7 +109,7 @@ html(lang="ru")
               each card in cards
                 li.rated__item
                   article.rated__card.product
-                    span.product__reting #{card.rating}
+                    span.product__rating.star-decoration #{card.rating}
                     picture.product__pic
                       source(srcset=card.srcXs, media=card.mediaXs)
                       source(srcset=card.srcSm, media=card.mediaSm)
@@ -118,7 +118,7 @@ html(lang="ru")
                     h3.product__title #{card.name}
                     span.product__price #{card.price}
                     del.product__price.product__price_old #{card.oldPrice}
-                    button.product__btn.btn-reset Купить
+                    button.product__btn.btn-reset.outline-btn Купить
 
       article.ad.ad_second.section
         .ad__container.container
