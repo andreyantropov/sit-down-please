@@ -1,0 +1,29 @@
+.subscription {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &__form-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 625px;
+  }
+
+  &__desc {
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    color: $text-dark-grey-color;
+  }
+
+  &__input {
+    margin-bottom: 30px;
+  }
+
+  &__btn {
+    margin-bottom: 15px;
+  }
+}

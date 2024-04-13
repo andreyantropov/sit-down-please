@@ -166,8 +166,8 @@ html(lang="ru")
       section.subscription.section
         .subscription__container.container
           .subscription__wrapper.wrapper
-            h2.subscription__title.title Мы&nbsp;всегда вам рады!
             .subscription__form-container
+              h2.subscription__title.title Мы&nbsp;всегда вам рады!
               p.subscription__desc Безусловно, новая модель организационной деятельности в&nbsp;значительной степени обусловливает важность распределения внутренних резервов и&nbsp;ресурсов.
               form.subscription__form(action="#" method="post")
                 .subscription__input.input
@@ -179,17 +179,18 @@ html(lang="ru")
                 .subscription__input.input
                   label.input__label.hidden(for="email") Введите имя:
                   input.input__control(type="email" id="email" name="email" placeholder="Ваш e-mail")
-                button.subscription__btn.btn-reset(type="submit") Отправить
-                .subscription__input.input
-                  label.input__label.hidden(for="license") Принимаю
-                    a.input__link пользовательское соглашение
-                  input.input__control(type="checkbox" id="license" name="license")
+                button.subscription__btn.btn-reset.primary-btn(type="submit") Отправить
+                .subscription__input.input.input_checkbox
+                  label.input__label.input__label_checkbox(for="license")
+                    input.input__control.input__control_checkbox.hidden(type="checkbox" id="license" name="license" checked)
+                    span.input__text.custom-checkbox Принимаю&nbsp;
+                      a.input__link пользовательское соглашение
 
-        picture.subscription__pic
-          source(srcset="img/subscription/subscription-xs.webp", media="(max-width: 576px)")
-          source(srcset="img/subscription/subscription-sm.webp", media="(max-width: 992px)")
-          source(srcset="img/subscription/subscription-md.webp", media="(max-width: 1366px)")
-          img.subscription__img(src="img/subscription/subscription-lg.webp", alt="" aria-hidden="true")
+            picture.subscription__pic
+              source(srcset="img/home/subscription/subscription-xs.webp", media="(max-width: 576px)")
+              source(srcset="img/home/subscription/subscription-sm.webp", media="(max-width: 992px)")
+              source(srcset="img/home/subscription/subscription-md.webp", media="(max-width: 1366px)")
+              img.subscription__img(src="img/home/subscription/subscription-lg.webp", alt="" aria-hidden="true")
 
     footer.footer
       .footer__container.container
