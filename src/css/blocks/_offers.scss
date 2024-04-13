@@ -1,0 +1,61 @@
+.offers {
+  &__list {
+    @include cardList();
+  }
+
+  &__item:nth-child(2) {
+    grid-column: span 2;
+  }
+
+  &__item:nth-child(4),
+  &__item:nth-child(5),
+  &__item:nth-child(6),
+  &__item:nth-child(7) {
+    display: none;
+  }
+}
+
+.offer {
+  @include card();
+
+  &__sale {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    color: $text-light-color;
+    background-color: $secondary-color;
+    clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+  }
+
+  &__pic {
+    margin-bottom: 10px;
+  }
+
+  &__img {
+    max-height: 273px;
+  }
+
+  &__title {
+    @include cardTitle();
+  }
+
+  &__price {
+    @include cardPrice();
+    margin-right: 20px;
+    color: $secondary-color;
+  }
+
+  &__price_old {
+    color: $text-grey-color;
+  }
+
+  &__scheme {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+  }
+}

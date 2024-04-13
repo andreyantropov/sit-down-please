@@ -9,12 +9,12 @@ html(lang="ru")
     link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
     link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap")
     link(rel="stylesheet", href="css/main.css")
-  body 
+  body
     header.header
       .header__container.container
         .header__wrapper.wrapper
-          address.header__address.address 
-            a.address__phone(href="tel:+74958854547") 
+          address.header__address.address
+            a.address__phone(href="tel:+74958854547")
               svg.icon.icon-phone(width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg")
                 use(xlink:href="img/sprite.svg#phone")
               span +7 (495) 885-45-47
@@ -22,21 +22,21 @@ html(lang="ru")
           .nav.header__nav.header__nav_top.nav
             - var navigation = [{ title: "О Компании", href: "#" }, { title: "Гарантия и возврат", href: "#" }, { title: "Корпоративным клиентам", href: "#" }, { title: "Дизайн-решение", href: "#" }]
             ul.nav__list.list-reset
-              each nav in navigation 
-                li.nav__item 
+              each nav in navigation
+                li.nav__item
                   a.nav__link(href=nav.href) #{nav.title}
 
-          a.header__logo 
+          a.header__logo
             img(src="img/logo.png" alt="SitDownPls")
 
           .nav.header__nav.header__nav_bottom.nav
             - var navigation = [{ title: "Каталог", href: "#" }, { title: "Магазины", href: "#" }, { title: "Шоурум", href: "#" }, { title: "Доставка и оплата", href: "#" }, { title: "Дисконт", href: "#" }, { title: "Контакты", href: "#" }]
             ul.nav__list.list-reset
-              each nav in navigation 
-                li.nav__item 
+              each nav in navigation
+                li.nav__item
                   a.nav__link(href=nav.href) #{nav.title}
 
-          form.header__form.search(action="#" method="get") 
+          form.header__form.search(action="#" method="get")
             .search__input.input
               label.input__label.hidden(for="search") Поиск по сайту:
               input.input__control.search-decoration(type="text" id="search" name="search" placeholder="Я хочу найти...")
@@ -44,7 +44,7 @@ html(lang="ru")
               svg.icon.arrow-icon(width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg")
                 use(xlink:href="img/sprite.svg#arrow")
 
-          .header__user.user 
+          .header__user.user
             a.user__account(href="#")
               svg.icon.user-icon(width="26" height="28" viewBox="0 0 26 28" fill="none" xmlns="http://www.w3.org/2000/svg")
                 use(xlink:href="img/sprite.svg#user")
@@ -54,97 +54,112 @@ html(lang="ru")
 
           .header__breadcrumbs.breadcrumbs
             - var navigation = [{ title: "Главная", href: "#" }, { title: "Каталог", href: "#" }, { title: "Диваны", href: "#" }, { title: "Прямые диваны", href: "#" }]
-            ul.breadcrumbs__list.list-reset 
-              each nav in navigation 
-                li.breadcrumbs__item 
+            ul.breadcrumbs__list.list-reset
+              each nav in navigation
+                li.breadcrumbs__item
                   a.breadcrumbs__link(href=nav.href) #{nav.title}
     main.main
-      article.ad.ad_first 
-        .ad__container.container 
-          .ad__wrapper.wrapper 
+      article.ad.ad_first.section
+        .ad__container.container
+          .ad__wrapper.wrapper
             h3.ad__title Скидка&nbsp;15% на&nbsp;первую покупку
             button.ad__btn.btn-reset.primary-btn Получить!
 
-      section.offers 
-        .offers__container.container 
+      section.offers.section
+        .offers__container.container
           .offers__wrapper.wrapper
             h2.offers__title.title Специальные предложения
             - var cards = [{ srcLg: "img/home/offers/offer-1-lg.webp", srcMd: "img/home/offers/offer-1-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/offers/offer-1-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/offers/offer-1-xs.webp", mediaXs: "(max-width: 576px)", name: "Кресло велюровое \"X-24\"", price: "15 990 руб", oldPrice: "24 990 руб", sale: "- 9000" }, { srcLg: "img/home/offers/offer-2-lg.webp", srcMd: "img/home/offers/offer-2-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/offers/offer-2-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/offers/offer-2-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван тканевый \"Z-44\"", price: "22 990 руб", oldPrice: "32 990 руб", sale: "- 10 000" }, { srcLg: "img/home/offers/offer-3-lg.webp", srcMd: "img/home/offers/offer-3-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/offers/offer-3-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/offers/offer-3-xs.webp", mediaXs: "(max-width: 576px)", name: "Будильник  \"Quartz-23\"", price: "1 290 руб", oldPrice: "1 890 руб", sale: "- 600" }, { srcLg: "img/home/offers/offer-4-lg.webp", srcMd: "img/home/offers/offer-4-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/offers/offer-4-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/offers/offer-4-xs.webp", mediaXs: "(max-width: 576px)", name: "Мини-скульптура \"Oh my deer\"", price: "15 990 руб", oldPrice: "990 руб", sale: "- 300" }, { srcLg: "img/home/offers/offer-5-lg.webp", srcMd: "img/home/offers/offer-5-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/offers/offer-5-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/offers/offer-5-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван вел-флок \"Z-85\"", price: "22 990 руб", oldPrice: "32 990 руб", sale: "- 10 000" }, { srcLg: "img/home/offers/offer-6-lg.webp", srcMd: "img/home/offers/offer-6-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/offers/offer-6-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/offers/offer-6-xs.webp", mediaXs: "(max-width: 576px)", name: "Термометр + гидрометр \"H-18\"", price: "1 390 руб", oldPrice: "2 090 руб", sale: "- 700" }]
             ul.offers__list.list-reset
-              each card in cards 
-                li.offers__item
-                  article.offers__card.offer
-                    span.offer__sale #{card.sale}
-                    picture.offer__pic 
-                      source(srcset=card.srcXs, media=card.mediaXs)
-                      source(srcset=card.srcSm, media=card.mediaSm)
-                      source(srcset=card.srcMd, media=card.mediaMd)
-                      img.work__img(src=card.srcLg, alt="Изображение товара")
-                    h3.offer__title.subtitle #{card.name} 
-                    span.offer__price #{card.price}
-                    del.offer__price.offer__price_old #{card.oldPrice}
-                    button.offer__btn.btn-reset Купить
+              each card, index in cards
+                if index !== 1
+                  li.offers__item
+                    article.offers__card.offer
+                      span.offer__sale #{card.sale}
+                      picture.offer__pic
+                        source(srcset=card.srcXs, media=card.mediaXs)
+                        source(srcset=card.srcSm, media=card.mediaSm)
+                        source(srcset=card.srcMd, media=card.mediaMd)
+                        img.offer__img(src=card.srcLg, alt="Изображение товара")
+                      h3.offer__title #{card.name}
+                      span.offer__price #{card.price}
+                      del.offer__price.offer__price_old #{card.oldPrice}
+                      button.offer__btn.btn-reset.outline-btn Купить
+                else
+                  li.offers__item
+                    article.offers__card.offer
+                      span.offer__sale #{card.sale}
+                      picture.offer__pic
+                        source(srcset=card.srcXs, media=card.mediaXs)
+                        source(srcset=card.srcSm, media=card.mediaSm)
+                        source(srcset=card.srcMd, media=card.mediaMd)
+                        img.offer__img(src=card.srcLg, alt="Изображение товара")
+                      h3.offer__title #{card.name}
+                      span.offer__price #{card.price}
+                      del.offer__price.offer__price_old #{card.oldPrice}
+                      button.offer__btn.btn-reset.outline-btn Купить
+                      img.offer__scheme(src="img/home/offers/offer-2-scheme-lg.webp", alt="Схема товара")
 
-      section.rated 
-        .rated__container.container 
-          .rated__wrapper.wrapper 
+      section.rated.section
+        .rated__container.container
+          .rated__wrapper.wrapper
             h2.rated__title.title Высокий рейтинг
             - var cards = [{ srcLg: "img/home/rated/rated-1-lg.webp", srcMd: "img/home/rated/rated-1-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/rated/rated-1-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/rated/rated-1-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван кожаный \"R-94\"", price: "94 990 руб", rating: "5.0" }, { srcLg: "img/home/rated/rated-2-lg.webp", srcMd: "img/home/rated/rated-2-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/rated/rated-2-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/rated/rated-2-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван апартековый \"T-75\"", price: "69 990 руб", rating: "4.9" }, { srcLg: "img/home/rated/rated-3-lg.webp", srcMd: "img/home/rated/rated-3-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/rated/rated-3-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/rated/rated-3-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван тканевый \"D-31\"", price: "28 490 руб", rating: "4.8" }, { srcLg: "img/home/rated/rated-4-lg.webp", srcMd: "img/home/rated/rated-4-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/rated/rated-4-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/rated/rated-4-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван велюровый \"Y-68\"", price: "22 990 руб", rating: "4.8" }, { srcLg: "img/home/rated/rated-5-lg.webp", srcMd: "img/home/rated/rated-5-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/rated/rated-5-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/rated/rated-5-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван из шинила \"W-95\"", price: "22 990 руб", rating: "4.8" }, { srcLg: "img/home/rated/rated-6-lg.webp", srcMd: "img/home/rated/rated-6-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/rated/rated-6-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/rated/rated-6-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван флоковый \"G-41\"", price: "17 990 руб", rating: "4.8" }, { srcLg: "img/home/rated/rated-7-lg.webp", srcMd: "img/home/rated/rated-7-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/rated/rated-7-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/rated/rated-7-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван шиниловый \"V-43\"", price: "19 990 руб", rating: "4.8" }, { srcLg: "img/home/rated/rated-8-lg.webp", srcMd: "img/home/rated/rated-8-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/rated/rated-8-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/rated/rated-8-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван велюровый \"S-99\"", price: "19 990 руб", rating: "4.7" }]
             ul.rated__list.list-reset
-              each card in cards 
+              each card in cards
                 li.rated__item
                   article.rated__card.product
                     span.product__reting #{card.rating}
-                    picture.product__pic 
+                    picture.product__pic
                       source(srcset=card.srcXs, media=card.mediaXs)
                       source(srcset=card.srcSm, media=card.mediaSm)
                       source(srcset=card.srcMd, media=card.mediaMd)
                       img.product__img(src=card.srcLg, alt="Изображение товара")
-                    h3.product__title.subtitle #{card.name} 
+                    h3.product__title #{card.name}
                     span.product__price #{card.price}
                     del.product__price.product__price_old #{card.oldPrice}
                     button.product__btn.btn-reset Купить
 
-      article.ad.ad_second 
-        .ad__container.container 
-          .ad__wrapper.wrapper 
+      article.ad.ad_second.section
+        .ad__container.container
+          .ad__wrapper.wrapper
             h3.ad__title Оксфорд 1950
             p.ad__desc Новая коллекция изысканных кресел
             button.ad__btn.btn-reset Ознакомиться
 
-      section.categories 
-        .categories__container.container 
-          .categories__wrapper.wrapper 
+      section.categories.section
+        .categories__container.container
+          .categories__wrapper.wrapper
             h2.categories__title.title
             - var cards = [{ srcLg: "img/home/categories/category-1-lg.webp", srcMd: "img/home/categories/category-1-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/categories/category-1-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/categories/category-1-xs.webp", mediaXs: "(max-width: 576px)", name: "Диваны", subcategories: [{ name: "Прямые" }, { name: "Угловатые" }, { name: "Модульные" }] }, { srcLg: "img/home/categories/category-2-lg.webp", srcMd: "img/home/categories/category-2-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/categories/category-2-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/categories/category-2-xs.webp", mediaXs: "(max-width: 576px)", name: "Кресла", subcategories: [{ name: "Мягкие" }, { name: "Кресла-кровати" }] }, { srcLg: "img/home/categories/category-3-lg.webp", srcMd: "img/home/categories/category-3-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/categories/category-3-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/categories/category-3-xs.webp", mediaXs: "(max-width: 576px)", name: "Кровати", subcategories: [{ name: "Односпальные" }, { name: "Двуспальные" }] }, { srcLg: "img/home/categories/category-4-lg.webp", srcMd: "img/home/categories/category-4-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/categories/category-4-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/categories/category-4-xs.webp", mediaXs: "(max-width: 576px)", name: "Тумбы и комоды", subcategories: [{ name: "Тумбы" }, { name: "Комоды" }] }, { srcLg: "img/home/categories/category-5-lg.webp", srcMd: "img/home/categories/category-5-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/categories/category-5-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/categories/category-5-xs.webp", mediaXs: "(max-width: 576px)", name: "Стулья", subcategories: [{ name: "Деревянные" }, { name: "Металлокаркас" }] }]
             ul.categories__list.list-reset
-              each card in cards 
+              each card in cards
                 li.categories__item
                   article.categories__card.category
-                    ul.subcategories__list 
+                    ul.subcategories__list
                       each subcategory in card.subcategories
                         li.subcategories__item #{subcategory.name}
-                    picture.category__pic 
+                    picture.category__pic
                       source(srcset=card.srcXs, media=card.mediaXs)
                       source(srcset=card.srcSm, media=card.mediaSm)
                       source(srcset=card.srcMd, media=card.mediaMd)
                       img.category__img(src=card.srcLg, alt="Пример товара из категории")
-                    h3.category__title.subtitle #{card.name} 
-                    button.category__btn.btn-reset 
+                    h3.category__title #{card.name}
+                    button.category__btn.btn-reset
                       span В&nbsp;Каталог
                       svg.icon.arrow-icon(width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg")
                         use(xlink:href="img/sprite.svg#arrow")
 
-      section.useful 
-        .useful__container.container 
-          .useful__wrapper.wrapper 
+      section.useful.section
+        .useful__container.container
+          .useful__wrapper.wrapper
             h2.useful__title.title Полезное
             - var cards = [{ srcLg: "img/home/useful/useful-1-lg.webp", srcMd: "img/home/useful/useful-1-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/useful/useful-1-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/useful/useful-1-xs.webp", mediaXs: "(max-width: 576px)", desc: "И нет сомнений, что сделанные на базе интернет-аналитики выводы представляют собой не что иное?"}, { srcLg: "img/home/useful/useful-2-lg.webp", srcMd: "img/home/useful/useful-2-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/useful/useful-2-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/useful/useful-2-xs.webp", mediaXs: "(max-width: 576px)", desc: "Как принято считать, некоторые особенности приносят несомненную пользу обществу?"}, { srcLg: "img/home/useful/useful-3-lg.webp", srcMd: "img/home/useful/useful-3-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/useful/useful-3-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/useful/useful-3-xs.webp", mediaXs: "(max-width: 576px)", desc: "Ясность нашей позиции очевидна: укрепление и развитие внутренней структуры?"}, { srcLg: "img/home/useful/useful-4-lg.webp", srcMd: "img/home/useful/useful-4-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/useful/useful-4-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/useful/useful-4-xs.webp", mediaXs: "(max-width: 576px)", desc: "Прежде всего, консультация с широким активом однозначно фиксирует необходимость распределения?"}, { srcLg: "img/home/useful/useful-5-lg.webp", srcMd: "img/home/useful/useful-5-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/useful/useful-5-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/useful/useful-5-xs.webp", mediaXs: "(max-width: 576px)", desc: "Как принято считать, некоторые особенности приносят несомненную пользу обществу?"}]
             ul.useful__list.list-reset
-              each card in cards 
+              each card in cards
                 li.useful__item
                   div.useful__card.topic
-                    picture.topic__pic 
+                    picture.topic__pic
                       source(srcset=card.srcXs, media=card.mediaXs)
                       source(srcset=card.srcSm, media=card.mediaSm)
                       source(srcset=card.srcMd, media=card.mediaMd)
@@ -152,9 +167,9 @@ html(lang="ru")
                     p.topic__desc #{card.desc}
                     button.topic__btn.btn-reset Читать
 
-      section.subscription 
-        .subscription__container.container 
-          .subscription__wrapper.wrapper 
+      section.subscription.section
+        .subscription__container.container
+          .subscription__wrapper.wrapper
             h2.subscription__title.title Мы&nbsp;всегда вам рады!
             .subscription__form-container
               p.subscription__desc Безусловно, новая модель организационной деятельности в&nbsp;значительной степени обусловливает важность распределения внутренних резервов и&nbsp;ресурсов.
@@ -170,20 +185,20 @@ html(lang="ru")
                   input.input__control(type="email" id="email" name="email" placeholder="Ваш e-mail")
                 button.subscription__btn.btn-reset(type="submit") Отправить
                 .subscription__input.input
-                  label.input__label.hidden(for="license") Принимаю 
+                  label.input__label.hidden(for="license") Принимаю
                     a.input__link пользовательское соглашение
                   input.input__control(type="checkbox" id="license" name="license")
-          
-        picture.subscription__pic 
+
+        picture.subscription__pic
           source(srcset="img/subscription/subscription-xs.webp", media="(max-width: 576px)")
           source(srcset="img/subscription/subscription-sm.webp", media="(max-width: 992px)")
           source(srcset="img/subscription/subscription-md.webp", media="(max-width: 1366px)")
-          img.subscription__img(src="img/subscription/subscription-lg.webp", alt="" aria-hidden="true")  
+          img.subscription__img(src="img/subscription/subscription-lg.webp", alt="" aria-hidden="true")
 
     footer.footer
       .footer__container.container
         .footer__wrapper.wrapper
-          .footer__column.footer__column_brand 
+          .footer__column.footer__column_brand
             a.footer__logo.logo(href="#")
               img(src="img/logo.png" alt="Логотип SitDownPls")
             .footer__socials.socials
@@ -193,7 +208,7 @@ html(lang="ru")
               a.socials__link(href="#" aria-label="Мы во Вконтакте")
                 svg.icon.icon-vk(width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg")
                   use(xlink:href="img/sprite.svg#vk")
-          
+
           .footer__column.footer__column_info.information
             - var information = [{ name: "О нас", items: [{ name: "О компании" }, { name: "Блог" }] }, { name: "Услуги", items: [{ name: "Доставка" }, { name: "Рассрочка и кредит" }, { name: "Сборка и установка" }] }, { name: "Связь с нами", items: [{name: "Обратная связь"}, { name: "Контакты" }] }, { name: "Сотрудничество", items: [{ name: "Поставщикам" }, { name: "Оптовикам" }, { name: "Карьера" }] }]
             ul.information__list.list-reset
@@ -206,4 +221,3 @@ html(lang="ru")
                         a.information__link #{item.name}
           span.footer__copy SDP<sup class="reg">&reg;</sup> 2011-2021
 
-          

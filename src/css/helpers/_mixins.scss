@@ -8,3 +8,34 @@
         left: 0;
     }
 }
+
+@mixin cardList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+@mixin card {
+  position: relative;
+  padding: 30px;
+  background-color: $background-grey-color;
+}
+
+@mixin cardTitle {
+  margin: 0;
+  margin-bottom: 30px;
+  max-width: 220px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 130%;
+  color: $text-dark-color;
+}
+
+@mixin cardPrice {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 130%;
+  color: $text-dark-grey-color;
+}

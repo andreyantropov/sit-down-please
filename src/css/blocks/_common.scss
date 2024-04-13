@@ -18,8 +18,13 @@ img {
     max-width: 100%;
 }
 
+picture {
+  display: block;
+}
+
 picture img {
     width: 100%;
+    height: auto;
 }
 
 body {
@@ -48,11 +53,16 @@ body {
     width: 100%;
 }
 
+.section {
+  margin-bottom: 45px;
+}
+
 .address {
     font-style: normal;
 }
 
 .primary-btn {
+    display: block;
     padding: 22px 47px;
     border: 2px solid $primary-color;
     border-radius: 10px;
@@ -62,7 +72,8 @@ body {
     background-color: $primary-color;
 }
 
-.outlined-btn {
+.outline-btn {
+    display: block;
     padding: 19px 35px;
     border: 2px solid $primary-color;
     border-radius: 10px;
@@ -100,4 +111,12 @@ body {
         background: $background-grey-color;
         transition: border 0.3s, color 0.3s, background-color 0.3s;
     }
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 400;
+  color: $text-dark-color;
 }
