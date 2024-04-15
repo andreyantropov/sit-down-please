@@ -35,6 +35,38 @@
     gap: 15px;
   }
 
+  .socials {
+    &__link {
+      padding: 5px;
+      transition: background-color 0.3s;
+
+      &:focus {
+        .icon-vk,
+        .icon-ok {
+          fill: $primary-color;
+        }
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: $primary-light-color;
+
+          .icon-vk,
+          .icon-ok {
+            fill: $text-light-color;
+          }
+        }
+      }
+
+      &:active {
+        .icon-vk,
+        .icon-ok {
+          fill: $primary-dark-color;
+        }
+      }
+    }
+  }
+
   .nav {
     &__list {
       display: grid;
@@ -53,6 +85,7 @@
       font-size: 14px;
       font-weight: 400;
       color: $text-grey-color;
+      transition: color 0.3s, background-color 0.3s;
 
       &:focus {
         color: $primary-color;

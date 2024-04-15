@@ -42,6 +42,7 @@
     font-size: 14px;
     font-weight: 400;
     color: $text-grey-color;
+    transition: color 0.3s, background-color 0.3s;
 
     &:focus {
       color: $primary-color;
@@ -74,6 +75,7 @@
   }
 
   &__btn {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -81,5 +83,73 @@
     font-weight: 700;
     line-height: 120%;
     color: $primary-color;
+    transition: color 0.3s;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 32px;
+      bottom: -2px;
+      left: 0;
+      height: 2px;
+      background-color: $primary-color;
+      opacity: 0;
+      transition: color 0.3s, opacity 0.3s;
+    }
+
+    .circle,
+    .path {
+      transition: fill 0.3s, stroke 0.3s;
+    }
+
+    &:focus {
+      &::after {
+        opacity: 1;
+      }
+
+      .circle {
+        fill: $primary-color;
+        stroke: $primary-color;
+      }
+
+      .path {
+        stroke: $text-light-color;
+      }
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        &::after {
+          opacity: 1;
+        }
+
+        .circle {
+          fill: $primary-light-color;
+          stroke: $primary-color;
+        }
+
+        .path {
+          stroke: $text-light-color;
+        }
+      }
+    }
+
+    &:active {
+      color: $primary-dark-color;
+
+      &::after {
+        background-color: $primary-dark-color;
+        opacity: 1;
+      }
+
+      .circle {
+        fill: $primary-dark-color;
+        stroke: $primary-dark-color;
+      }
+
+      .path {
+        stroke: $text-light-color;
+      }
+    }
   }
 }
