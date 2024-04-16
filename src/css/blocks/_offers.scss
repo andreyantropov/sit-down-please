@@ -19,6 +19,12 @@
       grid-column: span 1;
     }
   }
+
+  @media (max-width: 992px) {
+    &__item:nth-child(3) {
+      display: none;
+    }
+  }
 }
 
 .offer {

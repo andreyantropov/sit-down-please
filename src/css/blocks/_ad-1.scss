@@ -23,4 +23,8 @@
         line-height: 130%;
       }
     }
+
+    @media (max-width: 992px) {
+      background-image: url('../img/home/ad/ad-1-sm.webp');
+    }
 }

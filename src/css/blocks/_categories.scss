@@ -73,6 +73,18 @@
       }
     }
   }
+
+  @media (max-width: 992px) {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 511px 511px 511px;
+      row-gap: 30px;
+      grid-template-areas:
+        "categories-item-1 categories-item-1"
+        "categories-item-3 categories-item-2"
+        "categories-item-4 categories-item-5";
+    }
+  }
 }
 
 .category {

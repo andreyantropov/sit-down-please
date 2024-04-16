@@ -28,4 +28,12 @@
   .ad__btn {
     padding: 20px 30px;
   }
+
+  @media (max-width: 1366px) {
+    background-image: url('../img/home/ad/ad-2-md.webp');
+  }
+
+  @media (max-width: 992px) {
+    background-image: url('../img/home/ad/ad-2-sm.webp');
+  }
 }

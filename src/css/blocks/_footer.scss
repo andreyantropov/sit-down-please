@@ -113,4 +113,22 @@
       }
     }
   }
+
+  @media (max-width: 992px) {
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__column_brand {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+    }
+
+    .nav {
+      &__list {
+        gap: 30px;
+      }
+    }
+  }
 }

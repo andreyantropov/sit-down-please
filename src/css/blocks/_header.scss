@@ -300,4 +300,38 @@
             }
         }
     }
+
+    @media (max-width: 992px) {
+        &__wrapper {
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: 60px 15px 100px 2px 90px 2px;
+            grid-template-areas:
+                "address address . . . ."
+                "nav-top nav-top nav-top nav-top nav-top nav-top"
+                "logo logo . . user user"
+                "nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom"
+                "form form form form form form"
+                "breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs";
+    
+            &::before {
+                top: 55px;
+            }
+        }
+
+        .nav {
+            &__link {
+                font-size: 14px;
+            }
+        }
+
+        .search {
+            .input__control {
+                padding: 15px 70px 15px 56px;
+            }
+
+            &__btn {
+                right: 30px;
+            }
+        }
+    }
 }
