@@ -54,7 +54,7 @@
 
     .address {
         &__phone {
-            display: flex;
+            display: inline-flex;
             gap: 5px;
             align-items: center;
             font-size: 14px;
@@ -102,6 +102,8 @@
         &__link {
             display: inline-block;
             padding: 2px 5px;
+            font-size: 16px;
+            font-weight: 400;
             color: $text-dark-color;
             transition: color 0.3s, background-color 0.3s;
 
@@ -125,6 +127,7 @@
 
     .header__nav_top {
         .nav__link {
+            font-size: 14px;
             color: $text-grey-color;
             transition: color 0.3s, background-color 0.3s;
 
@@ -150,7 +153,7 @@
         position: relative;
 
         .input__control {
-            padding: 15px 56px;
+            padding: 15px 70px 15px 56px;
             background-size: 2%;
             background-position: 3% 50%;
             background-repeat: no-repeat;
@@ -267,5 +270,34 @@
 
     &__breadcrumbs {
         display: none;
+    }
+
+    @media (max-width: 1366px) {
+        &__wrapper {
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: 60px 15px 98px 21px 35px;
+            grid-template-areas:
+                "address address . . . . . ."
+                "nav-top nav-top nav-top nav-top nav-top nav-top user user"
+                "logo logo nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom"
+                "form form form form form form  . ."
+                "breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs";
+    
+            &::before {
+                top: 55px;
+            }
+        }
+
+        .search {
+            .input__control {
+                padding: 15px 56px;
+                background-size: 3%;
+                background-position: 4.2% 50%;
+            }
+
+            &__btn {
+                right: 10px;
+            }
+        }
     }
 }

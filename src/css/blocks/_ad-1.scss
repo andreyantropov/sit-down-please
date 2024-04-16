@@ -15,4 +15,12 @@
         line-height: 125%;
         color: $text-grey-color;
     }
+
+    @media (max-width: 1366px) {
+      background-image: url('../img/home/ad/ad-1-md.webp');
+
+      .ad__title {
+        line-height: 130%;
+      }
+    }
 }

@@ -13,6 +13,12 @@
   &__item:nth-child(7) {
     display: none;
   }
+
+  @media (max-width: 1366px) {
+    &__item:nth-child(2) {
+      grid-column: span 1;
+    }
+  }
 }
 
 .offer {
@@ -59,5 +65,11 @@
     position: absolute;
     right: 20px;
     bottom: 20px;
+  }
+
+  @media (max-width: 1366px) {
+    &__scheme {
+      display: none;
+    }
   }
 }

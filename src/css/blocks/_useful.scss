@@ -10,6 +10,16 @@
   &__item_5 {
     display: none;
   }
+
+  @media (max-width: 1366px) {
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__item_3 {
+      display: block;
+    }
+  }
 }
 
 .topic {
@@ -33,6 +43,16 @@
     bottom: 30px;
     left: 30px;
   }
+
+  @media (max-width: 1366px) {
+    padding-top: 230px;
+    min-height: 456px;
+
+    &__desc {
+      font-size: 16px;
+      line-height: 140%;
+    }
+  }
 }
 
 .topic-decoration-1 {
@@ -41,4 +61,18 @@
 
 .topic-decoration-2 {
   background-image: url('../img/home/useful/useful-2-lg.webp');
+}
+
+@media (max-width: 1366px) {
+  .topic-decoration-1 {
+    background-image: url('../img/home/useful/useful-1-md.webp');
+  }
+  
+  .topic-decoration-2 {
+    background-image: url('../img/home/useful/useful-2-md.webp');
+  }
+
+  .topic-decoration-3 {
+    background-image: url('../img/home/useful/useful-3-md.webp');
+  }
 }
