@@ -136,7 +136,7 @@ html(lang="ru")
       section.categories.section
         .categories__container.container
           .categories__wrapper.wrapper
-            h2.categories__title.title
+            h2.categories__title.title Топ категории
             - var cards = [{ srcLg: "img/home/categories/category-1-lg.webp", srcMd: "img/home/categories/category-1-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/categories/category-1-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/categories/category-1-xs.webp", mediaXs: "(max-width: 576px)", name: "Диваны", subcategories: [{ name: "Прямые" }, { name: "Угловатые" }, { name: "Модульные" }] }, { srcLg: "img/home/categories/category-2-lg.webp", srcMd: "img/home/categories/category-2-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/categories/category-2-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/categories/category-2-xs.webp", mediaXs: "(max-width: 576px)", name: "Кресла", subcategories: [{ name: "Мягкие" }, { name: "Кресла-кровати" }] }, { srcLg: "img/home/categories/category-3-lg.webp", srcMd: "img/home/categories/category-3-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/categories/category-3-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/categories/category-3-xs.webp", mediaXs: "(max-width: 576px)", name: "Кровати", subcategories: [{ name: "Односпальные" }, { name: "Двуспальные" }] }, { srcLg: "img/home/categories/category-4-lg.webp", srcMd: "img/home/categories/category-4-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/categories/category-4-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/categories/category-4-xs.webp", mediaXs: "(max-width: 576px)", name: "Тумбы и комоды", subcategories: [{ name: "Тумбы" }, { name: "Комоды" }] }, { srcLg: "img/home/categories/category-5-lg.webp", srcMd: "img/home/categories/category-5-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/home/categories/category-5-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/home/categories/category-5-xs.webp", mediaXs: "(max-width: 576px)", name: "Стулья", subcategories: [{ name: "Деревянные" }, { name: "Металлокаркас" }] }]
             ul.categories__list.list-reset
               each card, index in cards
@@ -154,7 +154,7 @@ html(lang="ru")
                       img.category__img(src=card.srcLg, alt="Пример товара из категории")
                     button.category__btn.btn-reset
                       span В&nbsp;Каталог
-                      svg.icon.icon-arrow(width="24" height="24" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg")
+                      svg.icon.icon-arrow(width="22" height="22" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg")
                         g(clip-path="url(#clip0_1_927)")
                           circle.circle(cx="16" cy="16" r="15" stroke-width="2")
                           path.path(d="M14 11L19 16L14 21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
@@ -217,7 +217,7 @@ html(lang="ru")
                 svg.icon.icon-vk(width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg")
                   use(xlink:href="img/sprite.svg#vk")
 
-          .footer__column.footer__column_nav.information
+          .footer__column.footer__column_nav
             nav.footer__nav.nav
               - var information = [{ name: "О нас", items: [{ name: "О компании" }, { name: "Блог" }] }, { name: "Услуги", items: [{ name: "Доставка" }, { name: "Рассрочка и кредит" }, { name: "Сборка и установка" }] }, { name: "Связь с нами", items: [{name: "Обратная связь"}, { name: "Контакты" }] }, { name: "Сотрудничество", items: [{ name: "Поставщикам" }, { name: "Оптовикам" }, { name: "Карьера" }] }]
               ul.nav__list.list-reset

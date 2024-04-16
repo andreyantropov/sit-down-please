@@ -3,12 +3,12 @@
   background-image: url('../img/home/ad/ad-2-lg.webp');
 
   .ad__wrapper {
-    @include adWrapper();
+    padding: 155px 0 150px;
   }
 
   .ad__title {
       margin: 0;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
       font-family: $third-family;
       font-size: 60px;
       font-weight: 900;
@@ -18,10 +18,14 @@
 
   .ad__desc {
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     max-width: 510px;
     font-size: 48px;
     font-weight: 400;
     color: $text-light-color;
+  }
+
+  .ad__btn {
+    padding: 20px 30px;
   }
 }

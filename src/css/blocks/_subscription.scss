@@ -1,8 +1,10 @@
 .subscription {
+  margin-bottom: 32px;
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
-    gap: 30px;
+    gap: 35px;
   }
 
   &__form-container {
@@ -11,19 +13,24 @@
     max-width: 625px;
   }
 
+  &__title {
+    margin-bottom: 10px;
+  }
+
   &__desc {
     margin: 0;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-size: 14px;
     font-weight: 400;
     color: $text-dark-grey-color;
   }
 
   &__input {
-    margin-bottom: 30px;
+    margin-bottom: 33px;
   }
 
   &__btn {
+    padding: 15px 30px;
     margin-bottom: 15px;
   }
 }

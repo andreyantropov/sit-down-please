@@ -6,12 +6,11 @@
 
 .product {
   @include card();
-  padding-top: 60px;
 
   &__rating {
     position: absolute;
     top: 20px;
-    left: 0;
+    left: 10px;
     padding: 10px 20px 10px 40px;
     color: $secondary-color;
     background-size: 20%;
@@ -32,11 +31,13 @@
   }
 
   &__img {
-    height: 100px;
+    height: 115px;
+    object-fit: contain;
   }
 
   &__title {
     @include cardTitle();
+    margin-bottom: 20px;
   }
 
   &__price {
