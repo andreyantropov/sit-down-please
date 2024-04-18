@@ -5,7 +5,7 @@
         align-items: center;
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: 65px 55px 60px 20px;
-        gap: 15px;
+        gap: $gap-sm;
         grid-template-areas:
             "address address . . . nav-top nav-top nav-top nav-top nav-top nav-top nav-top"
             "logo logo . nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom"

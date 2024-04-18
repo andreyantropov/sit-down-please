@@ -1,7 +1,7 @@
 .useful {
   &__list {
     display: grid;
-    gap: 30px;
+    gap: $gap;
     grid-template-columns: repeat(2, 1fr);
   }
 

@@ -25,7 +25,7 @@
 @mixin cardList {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  gap: $gap;
 
   @media (max-width: 1366px) {
     grid-template-columns: repeat(3, 1fr);
@@ -36,7 +36,7 @@
   }
 
   @media (max-width: 576px) {
-    gap: 15px;
+    gap: $gap-sm;
   }
 }
 
