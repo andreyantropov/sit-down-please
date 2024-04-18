@@ -1,48 +1,48 @@
 .product {
-    @include card-2();
-  
+  @include card-2();
+
+  &__rating {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    padding: 10px 20px 10px 40px;
+    color: $secondary-color;
+    background-size: 20%;
+    background-position: 30% 40%;
+    background-repeat: no-repeat;
+  }
+
+  .star-decoration {
+    background-image: url('../img/sprite.svg#star');
+  }
+
+  &__pic {
+    margin-bottom: 10px;
+  }
+
+  &__img {
+    height: 115px;
+    object-fit: contain;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 576px) {
     &__rating {
-      position: absolute;
-      top: 20px;
-      left: 10px;
-      padding: 10px 20px 10px 40px;
-      color: $secondary-color;
-      background-size: 20%;
-      background-position: 30% 40%;
-      background-repeat: no-repeat;
+      top: 10px;
+      left: 0;
+      font-size: 12px;
+      background-size: 15%;
     }
-  
-    .star-decoration {
-      background-image: url('../img/sprite.svg#star');
-    }
-  
+
     &__pic {
-      margin-bottom: 10px;
+      margin-bottom: 2px;
     }
-  
+
     &__img {
-      height: 115px;
-      object-fit: contain;
-    }
-  
-    &__title {
-      margin-bottom: 20px;
-    }
-  
-    @media (max-width: 576px) {
-      &__rating {
-        top: 10px;
-        left: 0;
-        font-size: 12px;
-        background-size: 15%;
-      }
-  
-      &__pic {
-        margin-bottom: 2px;
-      }
-  
-      &__img {
-        height: 90px;
-      }
+      height: 90px;
     }
   }
+}

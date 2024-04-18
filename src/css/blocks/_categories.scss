@@ -33,13 +33,14 @@
   }
 
   &__item {
+
     &:nth-child(1),
     &:nth-child(2) {
       .category__img {
         height: 315px;
       }
     }
-  
+
     &:nth-child(3),
     &:nth-child(4),
     &:nth-child(5) {
@@ -57,11 +58,12 @@
       grid-template-rows: 511px 511px;
       row-gap: 30px;
       grid-template-areas:
-      "categories-item-1 categories-item-1 categories-item-3"
-      "categories-item-4 categories-item-2 categories-item-5";
+        "categories-item-1 categories-item-1 categories-item-3"
+        "categories-item-4 categories-item-2 categories-item-5";
     }
 
     &__item {
+
       &:nth-child(1),
       &:nth-child(2),
       &:nth-child(3),
@@ -102,37 +104,37 @@
           @include card();
           gap: 10px;
           padding-top: 30px;
-        }
 
-        .category__list {
-          flex-direction: row;
-          gap: 15px;
-        }
+          &____list {
+            flex-direction: row;
+            gap: 15px;
+          }
 
-        .category__title {
-          margin: 0;
-        }
+          &__title {
+            margin: 0;
+          }
 
-        .category__btn {
-          padding: 0;
-          border: none;
-        }
+          &__btn {
+            padding: 0;
+            border: none;
+          }
 
-        .category__pic {
-          transform: translateX(-30px);
-        }
+          &__pic {
+            transform: translateX(-30px);
+          }
 
-        .category__img {
-          height: 212px;
-        }
+          &__img {
+            height: 212px;
+          }
 
-        .category__title {
-          max-width: none;
-          font-size: 24px;
-        }
+          &__title {
+            max-width: none;
+            font-size: 24px;
+          }
 
-        .category__link {
-          font-size: 14px;
+          &__link {
+            font-size: 14px;
+          }
         }
       }
 

@@ -109,19 +109,19 @@
             transition: color 0.3s, background-color 0.3s;
 
             &:focus {
-              color: $primary-color;
+                color: $primary-color;
             }
 
             @media (any-hover: hover) {
-              &:hover {
-                color: $primary-color;
-                background-color: $primary-light-color;
-              }
+                &:hover {
+                    color: $primary-color;
+                    background-color: $primary-light-color;
+                }
             }
 
             &:active {
-              color: $primary-dark-color;
-              background-color: transparent;
+                color: $primary-dark-color;
+                background-color: transparent;
             }
         }
     }
@@ -133,19 +133,19 @@
             transition: color 0.3s, background-color 0.3s;
 
             &:focus {
-              color: $primary-color;
+                color: $primary-color;
             }
 
             @media (any-hover: hover) {
-              &:hover {
-                color: $primary-color;
-                background-color: $primary-light-color;
-              }
+                &:hover {
+                    color: $primary-color;
+                    background-color: $primary-light-color;
+                }
             }
 
             &:active {
-              color: $primary-dark-color;
-              background-color: transparent;
+                color: $primary-dark-color;
+                background-color: transparent;
             }
         }
     }
@@ -221,6 +221,7 @@
             transition: background-color 0.3s;
 
             &:focus {
+
                 .icon-user,
                 .icon-cart {
                     fill: $primary-light-color;
@@ -283,7 +284,7 @@
                 "logo logo nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom"
                 "form form form form form form  . ."
                 "breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs";
-    
+
             &::before {
                 top: 55px;
             }
@@ -313,7 +314,7 @@
                 "nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom"
                 "form form form form form form"
                 "breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs";
-    
+
             &::before {
                 top: 55px;
             }
@@ -346,7 +347,7 @@
                 "nav-bottom nav-bottom nav-bottom nav-bottom"
                 "form form form form"
                 "breadcrumbs breadcrumbs breadcrumbs breadcrumbs";
-    
+
             &::before {
                 top: 0;
             }
