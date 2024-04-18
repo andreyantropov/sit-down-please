@@ -114,17 +114,7 @@ html(lang="ru")
             ul.rated__list.list-reset
               each card in cards
                 li.rated__item
-                  article.rated__card.product
-                    span.product__rating.star-decoration #{card.rating}
-                    picture.product__pic
-                      source(srcset=card.srcXs, media=card.mediaXs)
-                      source(srcset=card.srcSm, media=card.mediaSm)
-                      source(srcset=card.srcMd, media=card.mediaMd)
-                      img.product__img(src=card.srcLg, alt="Изображение товара")
-                    h3.product__title #{card.name}
-                    span.product__price #{card.price}
-                    del.product__price.product__price_old #{card.oldPrice}
-                    button.product__btn.btn-reset.outline-btn Купить
+                  include ./templates/card.pug
 
       article.ad.ad_second.section
         .ad__container.container
