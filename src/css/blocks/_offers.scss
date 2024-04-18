@@ -68,22 +68,13 @@
     object-fit: contain;
   }
 
-  &__title {
-    @include cardTitle();
-  }
-
   &__price {
-    @include cardPrice();
     margin-right: 20px;
     color: $secondary-color;
   }
 
   &__price_old {
     color: $text-grey-color;
-  }
-
-  &__btn {
-    @include cardBtn();
   }
 
   &__scheme {

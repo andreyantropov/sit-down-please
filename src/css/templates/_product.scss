@@ -16,10 +16,6 @@
       background-image: url('../img/sprite.svg#star');
     }
   
-    &__price {
-      @include cardPrice();
-    }
-  
     &__pic {
       margin-bottom: 10px;
     }
@@ -30,16 +26,7 @@
     }
   
     &__title {
-      @include cardTitle-2();
       margin-bottom: 20px;
-    }
-  
-    &__price {
-      @include cardPrice();
-    }
-  
-    &__btn {
-      @include cardBtn-2();
     }
   
     @media (max-width: 576px) {
