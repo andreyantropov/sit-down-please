@@ -1,11 +1,14 @@
 @import "./helpers/_variables.scss";
 @import "./helpers/_mixins.scss";
 @import "./blocks/_common.scss";
-@import "./blocks/_icons.scss";
+@import "./templates/_input.scss";
+@import "./templates/_buttons.scss";
+@import "./templates/_icons.scss";
 @import "./blocks/_header.scss";
 @import "./blocks/_ad-1.scss";
 @import "./blocks/_offers.scss";
 @import "./blocks/_rated.scss";
+@import "./templates/_product.scss";
 @import "./blocks/_ad-2.scss";
 @import "./blocks/_categories.scss";
 @import "./blocks/_useful.scss";
