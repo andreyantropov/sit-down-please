@@ -25,6 +25,21 @@
       display: none;
     }
   }
+
+  @media (max-width: 576px) {
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 24px;
+    }
+
+    &__item:nth-child(3),
+    &__item:nth-child(4),
+    &__item:nth-child(5),
+    &__item:nth-child(6),
+    &__item:nth-child(7) {
+      display: block;
+    }
+  }
 }
 
 .offer {
@@ -67,6 +82,10 @@
     color: $text-grey-color;
   }
 
+  &__btn {
+    @include cardBtn();
+  }
+
   &__scheme {
     position: absolute;
     right: 20px;
@@ -76,6 +95,18 @@
   @media (max-width: 1366px) {
     &__scheme {
       display: none;
+    }
+  }
+
+  @media (max-width: 576px) {
+    @include card-sm();
+
+    &__title {
+      @include cardTitle-sm();
+    }
+
+    &__btn {
+      @include cardBtn-sm();
     }
   }
 }

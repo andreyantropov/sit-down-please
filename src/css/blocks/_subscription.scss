@@ -44,4 +44,20 @@
       line-height: 132%;
     }
   }
+
+  @media (max-width: 576px) {
+    margin-bottom: 20px;
+
+    &__wrapper {
+      display: block;
+    }
+
+    &__form-container {
+      max-width: none;
+    }
+
+    .input__text {
+      font-size: 12px;
+    }
+  }
 }

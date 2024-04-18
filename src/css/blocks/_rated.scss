@@ -50,4 +50,25 @@
   &__price {
     @include cardPrice();
   }
+
+  &__btn {
+    @include cardBtn();
+  }
+
+  @media (max-width: 576px) {
+    &__rating {
+      top: 10px;
+      left: 0;
+      font-size: 12px;
+      background-size: 15%;
+    }
+
+    &__pic {
+      margin-bottom: 2px;
+    }
+
+    &__img {
+      height: 90px;
+    }
+  }
 }

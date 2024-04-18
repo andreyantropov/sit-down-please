@@ -105,6 +105,7 @@
             font-size: 16px;
             font-weight: 400;
             color: $text-dark-color;
+            white-space: nowrap;
             transition: color 0.3s, background-color 0.3s;
 
             &:focus {
@@ -328,6 +329,47 @@
             .input__control {
                 padding: 15px 70px 15px 56px;
             }
+
+            &__btn {
+                right: 30px;
+            }
+        }
+    }
+
+    @media (max-width: 576px) {
+        &__wrapper {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 55px 45px 25px 55px 20px;
+            grid-template-areas:
+                ". logo logo logo"
+                "address address address user"
+                "nav-bottom nav-bottom nav-bottom nav-bottom"
+                "form form form form"
+                "breadcrumbs breadcrumbs breadcrumbs breadcrumbs";
+    
+            &::before {
+                top: 0;
+            }
+        }
+
+        .nav {
+            width: calc(100% + 15px);
+
+            &__list {
+                overflow: scroll;
+            }
+        }
+
+        &__nav_top {
+            display: none;
+        }
+
+        .search {
+            .input__control {
+                background-size: 7%;
+                background-position: 10% 50%;
+            }
+
 
             &__btn {
                 right: 30px;

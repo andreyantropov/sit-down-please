@@ -30,6 +30,19 @@
       display: none;
     }
   }
+
+  @media (max-width: 576px) {
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 25px;
+    }
+
+    &__item_3,
+    &__item_4,
+    &__item_5 {
+      display: block;
+    }
+  }
 }
 
 .topic {
@@ -63,6 +76,11 @@
       line-height: 140%;
     }
   }
+
+  @media (max-width: 576px) {
+    @include card-sm();
+    padding-top: 230px;
+  }
 }
 
 .topic-decoration-1 {
@@ -84,5 +102,37 @@
 
   .topic-decoration-3 {
     background-image: url('../img/home/useful/useful-3-md.webp');
+  }
+}
+
+@media (max-width: 992px) {
+  .topic-decoration-1 {
+    background-image: url('../img/home/useful/useful-1-sm.webp');
+  }
+  
+  .topic-decoration-2 {
+    background-image: url('../img/home/useful/useful-2-sm.webp');
+  }
+}
+
+@media (max-width: 576px) {
+  .topic-decoration-1 {
+    background-image: url('../img/home/useful/useful-1-xs.webp');
+  }
+  
+  .topic-decoration-2 {
+    background-image: url('../img/home/useful/useful-2-xs.webp');
+  }
+
+  .topic-decoration-3 {
+    background-image: url('../img/home/useful/useful-3-xs.webp');
+  }
+
+  .topic-decoration-4 {
+    background-image: url('../img/home/useful/useful-4-xs.webp');
+  }
+  
+  .topic-decoration-5 {
+    background-image: url('../img/home/useful/useful-5-xs.webp');
   }
 }

@@ -27,4 +27,27 @@
     @media (max-width: 992px) {
       background-image: url('../img/home/ad/ad-1-sm.webp');
     }
+
+    @media (max-width: 576px) {
+      margin-bottom: 163px;
+      background-image: url('../img/home/ad/ad-1-xs.webp');
+
+      .ad__wrapper {
+        position: relative;
+        padding: 30px 0 127px;
+      }
+
+      .ad__title {
+        margin: 0;
+        max-width: 235px;
+        font-size: 20px;
+      }
+
+      .ad__btn {
+        position: absolute;
+        right: 0;
+        bottom: -95px;
+        left: 0;
+      }
+    }
 }

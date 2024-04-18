@@ -131,4 +131,23 @@
       }
     }
   }
+
+  @media (max-width: 576px) {
+    &__column_brand {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    &__logo {
+      margin-bottom: 10px;
+    }
+
+    .nav {
+      &__list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
 }

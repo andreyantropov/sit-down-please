@@ -20,7 +20,7 @@ html(lang="ru")
                 use(xlink:href="img/sprite.svg#phone")
               span +7 (495) 885-45-47
 
-          .nav.header__nav.header__nav_top.nav
+          nav.header__nav.header__nav_top.nav
             - var navigation = [{ title: "О Компании", href: "#" }, { title: "Гарантия и возврат", href: "#" }, { title: "Корпоративным клиентам", href: "#" }, { title: "Дизайн-решение", href: "#" }]
             ul.nav__list.list-reset
               each nav in navigation
@@ -30,7 +30,7 @@ html(lang="ru")
           a.header__logo
             img(src="img/logo.png" alt="SitDownPls")
 
-          .nav.header__nav.header__nav_bottom.nav
+          nav.header__nav.header__nav_bottom.nav
             - var navigation = [{ title: "Каталог", href: "#" }, { title: "Магазины", href: "#" }, { title: "Шоурум", href: "#" }, { title: "Доставка и оплата", href: "#" }, { title: "Дисконт", href: "#" }, { title: "Контакты", href: "#" }]
             ul.nav__list.list-reset
               each nav in navigation
