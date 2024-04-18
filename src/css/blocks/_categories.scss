@@ -99,7 +99,7 @@
     &__item {
       &:nth-child(1) {
         .category {
-          @include card-sm();
+          @include card();
           gap: 10px;
           padding-top: 30px;
         }
@@ -140,7 +140,7 @@
 }
 
 .category {
-  @include card();
+  @include card-2();
   display: flex;
   flex-direction: column;
   padding-top: 30px;
@@ -175,7 +175,7 @@
   }
 
   &__title {
-    @include cardTitle();
+    @include cardTitle-2();
   }
 
   &__pic {

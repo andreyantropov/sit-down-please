@@ -78,7 +78,6 @@
   }
 
   @media (max-width: 576px) {
-    @include card-sm();
     padding-top: 230px;
   }
 }

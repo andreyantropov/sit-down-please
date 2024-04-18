@@ -38,15 +38,14 @@
   padding-top: 75px;
   border-radius: 10px;
   background-color: $background-grey-color;
+}
+
+@mixin card-2 {
+  @include card();
 
   @media (max-width: 576px) {
     padding: 15px;
   }
-}
-
-@mixin card-sm {
-  padding: 30px;
-  padding-top: 75px;
 }
 
 @mixin cardTitle {
@@ -57,16 +56,15 @@
   font-weight: 400;
   line-height: 130%;
   color: $text-dark-color;
+}
+
+@mixin cardTitle-2 {
+  @include cardTitle();
 
   @media (max-width: 576px) {
     margin-bottom: 10px;
     font-size: 16px;
   }
-}
-
-@mixin cardTitle-sm {
-  margin-bottom: 20px;
-  font-size: 24px;
 }
 
 @mixin cardPrice {
@@ -85,12 +83,12 @@
   font-size: 16px;
   font-weight: 600;
   color: $primary-color;
+}
+
+@mixin cardBtn-2 {
+  @include cardBtn();
 
   @media (max-width: 576px) {
     padding: 8px 24px;
   }
-}
-
-@mixin cardBtn-sm {
-  padding: 19px 35px;
 }

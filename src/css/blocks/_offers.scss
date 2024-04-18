@@ -97,16 +97,4 @@
       display: none;
     }
   }
-
-  @media (max-width: 576px) {
-    @include card-sm();
-
-    &__title {
-      @include cardTitle-sm();
-    }
-
-    &__btn {
-      @include cardBtn-sm();
-    }
-  }
 }

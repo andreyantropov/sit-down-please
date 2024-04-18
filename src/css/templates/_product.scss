@@ -1,5 +1,5 @@
 .product {
-    @include card();
+    @include card-2();
   
     &__rating {
       position: absolute;
@@ -30,7 +30,7 @@
     }
   
     &__title {
-      @include cardTitle();
+      @include cardTitle-2();
       margin-bottom: 20px;
     }
   
@@ -39,7 +39,7 @@
     }
   
     &__btn {
-      @include cardBtn();
+      @include cardBtn-2();
     }
   
     @media (max-width: 576px) {
