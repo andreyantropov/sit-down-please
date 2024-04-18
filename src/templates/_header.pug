@@ -1,0 +1,53 @@
+header.header
+    .header__container.container
+        .header__wrapper.wrapper
+            address.header__address.address
+                a.address__phone(href="tel:+74958854547")
+                    svg.icon.icon-phone(width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        use(xlink:href="img/sprite.svg#phone")
+                    span +7 (495) 885-45-47
+
+            nav.header__nav.header__nav_top.nav
+                - var navigation = [{ title: "О Компании", href: "#" }, { title: "Гарантия и возврат", href: "#" }, { title: "Корпоративным клиентам", href: "#" }, { title: "Дизайн-решение", href: "#" }]
+                ul.nav__list.list-reset
+                    each nav in navigation
+                        li.nav__item
+                            a.nav__link(href=nav.href) #{nav.title}
+
+            a.header__logo
+                img(src="img/logo.png" alt="SitDownPls")
+
+            nav.header__nav.header__nav_bottom.nav
+                - var navigation = [{ title: "Каталог", href: "#" }, { title: "Магазины", href: "#" }, { title: "Шоурум", href: "#" }, { title: "Доставка и оплата", href: "#" }, { title: "Дисконт", href: "#" }, { title: "Контакты", href: "#" }]
+                ul.nav__list.list-reset
+                    each nav in navigation
+                        li.nav__item
+                            a.nav__link(href=nav.href) #{nav.title}
+
+            form.header__form.search(action="#" method="get")
+                .search__input.input
+                    label.input__label.hidden(for="search") Поиск по сайту:
+                    input.input__control.search-decoration(type="text" id="search" name="search" placeholder="Я хочу найти...")
+                button.search__btn.btn-reset(type="submit")
+                    svg.icon.icon-arrow(width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg")
+                        g(clip-path="url(#clip0_1_927)")
+                            circle.circle(cx="16" cy="16" r="15" stroke-width="2")
+                            path.path(d="M14 11L19 16L14 21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+                        defs 
+                            clipPath(id="clip0_1_927")
+                                rect(width="32" height="32" fill="white")
+
+            .header__user.user
+                a.user__link.user__link_account(href="#")
+                    svg.icon.icon-user(width="26" height="28" viewBox="0 0 26 28" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        use(xlink:href="img/sprite.svg#user")
+                a.user__link.user__link_cart(href="#")
+                    svg.icon.icon-cart(width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        use(xlink:href="img/sprite.svg#cart")
+
+            .header__breadcrumbs.breadcrumbs
+                - var navigation = [{ title: "Главная", href: "#" }, { title: "Каталог", href: "#" }, { title: "Диваны", href: "#" }, { title: "Прямые диваны", href: "#" }]
+                ul.breadcrumbs__list.list-reset
+                    each nav in navigation
+                        li.breadcrumbs__item
+                            a.breadcrumbs__link(href=nav.href) #{nav.title}
