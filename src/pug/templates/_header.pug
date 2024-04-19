@@ -46,7 +46,7 @@ header.header
                         use(xlink:href="img/sprite.svg#cart")
 
             .header__breadcrumbs.breadcrumbs
-                - var navigation = [{ title: "Главная", href: "#" }, { title: "Каталог", href: "#" }, { title: "Диваны", href: "#" }, { title: "Прямые диваны", href: "#" }]
+                - var navigation = input || []
                 ul.breadcrumbs__list.list-reset
                     each nav in navigation
                         li.breadcrumbs__item

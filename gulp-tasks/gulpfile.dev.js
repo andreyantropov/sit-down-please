@@ -84,7 +84,7 @@ const devServer = () => {
     },
   });
 
-  watch('./src/*.pug', html);
+  watch('./src/pug/*.pug', html);
   watch('./src/css/**/*.scss', styles);
   watch('./src/css/**/*.css', styles);
   watch('./src/js/**/*.js', scripts);
@@ -96,7 +96,7 @@ const devServer = () => {
 }
 
 const html = () => {
-  return src('src/*.pug')
+  return src('src/pug/*.pug')
     .pipe(pug())
     .pipe(dest('dist'))
     .pipe(browserSync.stream());

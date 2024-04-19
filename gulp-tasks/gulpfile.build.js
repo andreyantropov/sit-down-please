@@ -76,7 +76,7 @@ const fonts = () => {
 }
 
 const htmlMinify = () => {
-  return src('src/*.pug')
+  return src('src/pug/*.pug')
     .pipe(pug())
     .pipe(htmlmin({
       collapseWhitespace: true

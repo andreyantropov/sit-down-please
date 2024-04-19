@@ -270,10 +270,6 @@
         }
     }
 
-    &__breadcrumbs {
-        display: none;
-    }
-
     @media (max-width: 1366px) {
         &__wrapper {
             grid-template-columns: repeat(8, 1fr);
@@ -350,6 +346,10 @@
 
             &::before {
                 top: 0;
+            }
+
+            &__breadcrumbs {
+                display: none;
             }
         }
 
