@@ -1,0 +1,6 @@
+.catalog-wrapper {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: $gap;
+    padding-top: 30px;
+}

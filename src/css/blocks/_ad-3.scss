@@ -1,0 +1,112 @@
+.ad_third {
+  margin: 0;
+
+    .ad__container {
+        padding: 0;
+    }
+    
+    .ad__wrapper {
+        @include card();
+        padding-top: 210px;
+        background-image: url('../img/catalog/ad/ad-lg.webp');
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-color: $background-dark-color;
+    }
+
+    .ad__title {
+        margin: 0;
+        font-family: $third-family;
+        font-size: 24px;
+        font-weight: 900;
+        color: $ad-title-color;
+    }
+
+    .ad__desc {
+        max-width: 180px;
+        font-size: 16px;
+        font-weight: 400;
+        color: $text-grey-color;
+    }
+
+    .ad__btn {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 0;
+        border: none;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 120%;
+        color: $primary-color;
+        transition: color 0.3s;
+    
+        &::after {
+          content: '';
+          position: absolute;
+          right: 32px;
+          bottom: -2px;
+          left: 0;
+          height: 2px;
+          background-color: $primary-color;
+          opacity: 0;
+          transition: color 0.3s, opacity 0.3s;
+        }
+    
+        .circle,
+        .path {
+          transition: fill 0.3s, stroke 0.3s;
+        }
+    
+        &:focus {
+          &::after {
+            opacity: 1;
+          }
+    
+          .circle {
+            fill: $primary-color;
+            stroke: $primary-color;
+          }
+    
+          .path {
+            stroke: $text-light-color;
+          }
+        }
+    
+        @media (any-hover: hover) {
+          &:hover {
+            &::after {
+              opacity: 1;
+            }
+    
+            .circle {
+              fill: $primary-light-color;
+              stroke: $primary-color;
+            }
+    
+            .path {
+              stroke: $text-light-color;
+            }
+          }
+        }
+    
+        &:active {
+          color: $primary-dark-color;
+    
+          &::after {
+            background-color: $primary-dark-color;
+            opacity: 1;
+          }
+    
+          .circle {
+            fill: $primary-dark-color;
+            stroke: $primary-dark-color;
+          }
+    
+          .path {
+            stroke: $text-light-color;
+          }
+        }
+      }
+}

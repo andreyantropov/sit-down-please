@@ -81,6 +81,10 @@
   .custom-checkbox {
     position: relative;
     padding-left: 18px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 400;
+    color: $text-dark-color;
   }
 
   .custom-checkbox::before {
@@ -152,6 +156,31 @@
 
     &:active::after {
       background-color: $primary-dark-color;
+    }
+  }
+
+  &__control_number {
+    padding: 5px 10px;
+    border-radius: 0;
+    min-width: 86px;
+    height: 30px;
+    background-color: transparent;
+
+    &:focus {
+      border: 2px solid $primary-color;
+      background-color: transparent;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        border: 2px solid $primary-color;
+        background-color: $primary-lighter-color;
+      }
+    }
+
+    &:active {
+      border: 2px solid $primary-dark-color;
+      background-color: transparent;
     }
   }
 }
