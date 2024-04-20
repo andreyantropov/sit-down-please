@@ -57,11 +57,11 @@ html(lang="ru")
         .similar__container.container
           .similar__wrapper.wrapper
             h2.similar__title.title Похожие товары
-              - var cards = [{ srcLg: "img/card/similar/similar-1-lg.webp", srcMd: "img/card/similar/similar-1-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/card/similar/similar-1-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/card/similar/similar-1-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван велюровый \"R-85\"", price: "34 990 руб", rating: "4.5" }, { srcLg: "img/card/similar/similar-2-lg.webp", srcMd: "img/card/similar/similar-2-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/card/similar/similar-2-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/card/similar/similar-2-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван флоковый \"H-58\"", price: "23 990 руб", rating: "4.4" }, { srcLg: "img/card/similar/similar-3-lg.webp", srcMd: "img/card/similar/similar-3-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/card/similar/similar-3-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/card/similar/similar-3-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван велюровый \"S-44\"", price: "19 990 руб", rating: "4.5" }, { srcLg: "img/card/similar/similar-4-lg.webp", srcMd: "img/card/similar/similar-4-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/card/similar/similar-4-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/card/similar/similar-4-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван шиниловый \"V-43\"", price: "19 990 руб", rating: "4.8" }]
-              ul.similar__list.list-reset
-                each card in cards
-                  li.similar__item
-                    include ./templates/_product.pug
+            - var cards = [{ srcLg: "img/card/similar/similar-1-lg.webp", srcMd: "img/card/similar/similar-1-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/card/similar/similar-1-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/card/similar/similar-1-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван велюровый \"R-85\"", price: "34 990 руб", rating: "4.5" }, { srcLg: "img/card/similar/similar-2-lg.webp", srcMd: "img/card/similar/similar-2-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/card/similar/similar-2-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/card/similar/similar-2-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван флоковый \"H-58\"", price: "23 990 руб", rating: "4.4" }, { srcLg: "img/card/similar/similar-3-lg.webp", srcMd: "img/card/similar/similar-3-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/card/similar/similar-3-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/card/similar/similar-3-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван велюровый \"S-44\"", price: "19 990 руб", rating: "4.5" }, { srcLg: "img/card/similar/similar-4-lg.webp", srcMd: "img/card/similar/similar-4-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/card/similar/similar-4-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/card/similar/similar-4-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван шиниловый \"V-43\"", price: "19 990 руб", rating: "4.8" }]
+            ul.similar__list.list-reset
+              each card in cards
+                li.similar__item
+                  include ./templates/_product.pug
 
     include ./templates/_footer.pug
 

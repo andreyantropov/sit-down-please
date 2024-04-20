@@ -111,4 +111,50 @@
       color: $text-dark-color;
     }
   }
+
+  @media (max-width: 992px) {
+    &__wrapper {
+      grid-template-columns: 1fr;
+    }
+
+    .info {
+      &__title {
+        font-size: 24px;
+      }
+    }
+
+    .characteristics {
+      &__item {
+        margin-bottom: $gap-sm;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .characteristic {
+      grid-template-columns: 1fr;
+
+      &__key {
+        font-size: 10px;
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .info {
+      &__title {
+        font-size: 16px;
+      }
+
+      &__price {
+        font-size: 24px;
+      }
+    }
+  }
 }

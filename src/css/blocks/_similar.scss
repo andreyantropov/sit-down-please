@@ -2,4 +2,20 @@
   &__list {
     @include cardList();
   }
+
+  @media (max-width: 1366px) {
+    &__item {
+      &:nth-child(4) {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    &__item {
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+  }
 }
