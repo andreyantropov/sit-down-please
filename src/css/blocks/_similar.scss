@@ -1,0 +1,5 @@
+.similar {
+  &__list {
+    @include cardList();
+  }
+}

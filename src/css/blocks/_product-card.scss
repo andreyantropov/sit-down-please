@@ -1,0 +1,114 @@
+.product-card {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $gap;
+    padding-top: $gap;
+  }
+
+  .info {
+    position: relative;
+    padding-top: 30px;
+
+    &__rating {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px 20px 10px 20px;
+      font-size: 16px;
+      color: $secondary-color;
+      background-size: 20%;
+      background-position: 0 50%;
+      background-repeat: no-repeat;
+    }
+
+    &__title {
+      margin-bottom: 0;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 130%;
+      color: $text-dark-color;
+    }
+
+    &__note {
+      display: block;
+      margin-bottom: 30px;
+      font-size: 14px;
+      font-weight: 400;
+      color: $text-grey-color;
+    }
+
+    &__price {
+      display: block;
+      margin-bottom: 30px;
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 130%;
+      color: $text-dark-color;
+    }
+
+    &__buy-btn {
+      margin-bottom: 5px;
+    }
+
+    &__add-btn {
+      border: none;
+    }
+  }
+
+  .star-decoration {
+    background-image: url('../img/sprite.svg#star');
+  }
+
+  .description {
+    &__title {
+      margin: 0;
+      margin-bottom: $gap-sm;
+      font-size: 16px;
+      font-weight: 600;
+      color: $text-dark-color;
+    }
+
+    &__desc {
+      margin: 0;
+      margin-bottom: $gap-sm;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 180%;
+      color: $text-dark-color;
+
+      &_last {
+        margin-bottom: 60px;
+      }
+    }
+
+    .schemes {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .characteristic {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &__key {
+      @include characterictic();
+      color: $text-grey-color;
+      white-space: nowrap;
+      overflow: hidden;
+
+      &::after {
+        content: '........................................................................................................................................................................................................................................................................................................................................';
+        display: inline;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+
+    &__value {
+      @include characterictic();
+      color: $text-dark-color;
+    }
+  }
+}
