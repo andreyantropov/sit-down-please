@@ -3,4 +3,8 @@
     grid-template-columns: 300px 1fr;
     gap: $gap;
     padding-top: 30px;
+
+    @media (max-width: 1366px) {
+      grid-template-columns: 1fr;
+    }
 }

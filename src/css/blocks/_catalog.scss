@@ -1,59 +1,81 @@
 .catalog {
-    &__wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    &__container {
-        padding: 0;
-    }
+  &__container {
+    padding: 0;
+  }
 
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $gap;
+    margin-bottom: $gap;
+  }
+
+  @media (max-width: 992px) {
     &__list {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: $gap;
-        margin-bottom: $gap;
+      grid-template-columns: repeat(2, 1fr);
     }
+
+    &__item {
+      &:nth-child(7),
+      &:nth-child(8),
+      &:nth-child(9) {
+        display: none;
+      }
+    }
+  }
 }
 
 .paginator {
-    display: flex;
-    gap: $gap;
+  display: flex;
+  gap: $gap;
 
-    &__page {
-        padding: 10px 15px;
-        border: 2px solid $primary-color;
-        border-radius: 10px;
-        font-size: 16px;
-        font-weight: 600;
-        color: $primary-color;
-        transition: border 0.3s, color 0.3s, background-color 0.3s;
+  &__page {
+    padding: 10px 15px;
+    border: 2px solid $primary-color;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: $primary-color;
+    transition: border 0.3s, color 0.3s, background-color 0.3s;
 
-        &:nth-child(3) {
-            display: none;
-        }
-
-        &:focus {
-            color: $text-light-color;
-            background-color: $primary-color;
-        }
-
-        @media (any-hover: hover) {
-            &:hover {
-                color: $text-light-color;
-                background-color: $primary-light-color;
-            }
-        }
-
-        &:active {
-            border: 2px solid $primary-dark-color;
-            background-color: $primary-dark-color;
-        }
+    &:nth-child(3) {
+      display: none;
     }
 
-    &__page_active {
+    &:focus {
+      color: $text-light-color;
+      background-color: $primary-color;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
         color: $text-light-color;
-        background-color: $primary-color;
+        background-color: $primary-light-color;
+      }
     }
+
+    &:active {
+      border: 2px solid $primary-dark-color;
+      background-color: $primary-dark-color;
+    }
+  }
+
+  &__page_active {
+    color: $text-light-color;
+    background-color: $primary-color;
+  }
+
+  @media (max-width: 992px) {
+    &__page {
+      &:nth-child(3) {
+        display: block;
+      }
+    }
+  }
 }
