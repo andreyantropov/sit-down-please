@@ -1,13 +1,13 @@
-.ad_second {
+.ad-second {
   @include ad();
   background-image: url('../img/home/ad/ad-2-lg.webp');
   background-color: $background-grey-color;
 
-  .ad__wrapper {
+  &__wrapper {
     padding: 155px 0 150px;
   }
 
-  .ad__title {
+  &__title {
     margin: 0;
     margin-bottom: 5px;
     font-family: $third-family;
@@ -17,7 +17,7 @@
     color: $ad-title-color;
   }
 
-  .ad__desc {
+  &__desc {
     margin: 0;
     margin-bottom: 50px;
     max-width: 510px;
@@ -26,7 +26,7 @@
     color: $text-light-color;
   }
 
-  .ad__btn {
+  &__btn {
     padding: 20px 30px;
   }
 
@@ -42,20 +42,20 @@
     margin-bottom: 163px;
     background-image: url('../img/home/ad/ad-2-xs.webp');
 
-    .ad__wrapper {
+    &__wrapper {
       position: relative;
       padding: 30px 80px 60px 0;
     }
 
-    .ad__title {
+    &__title {
       font-size: 24px;
     }
 
-    .ad__desc {
+    &__desc {
       font-size: 16px;
     }
 
-    .ad__btn {
+    &__btn {
       position: absolute;
       right: 0;
       bottom: -95px;

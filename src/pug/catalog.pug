@@ -11,7 +11,7 @@ html(lang="ru")
         link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap")
         link(rel="stylesheet" href="css/main.css")
     body
-        - var input =  [{ title: "Главная", href: "#" }, { title: "Каталог", href: "#" }, { title: "Диваны", href: "#" }, { title: "Прямые диваны", href: "#" }]
+        - var navigationBreadcrumbs =  [{ title: "Главная", href: "#" }, { title: "Каталог", href: "#" }, { title: "Диваны", href: "#" }, { title: "Прямые диваны", href: "#" }]
         include ./shared/_header.pug
 
         main.main
@@ -48,12 +48,12 @@ html(lang="ru")
                                                 label.input__label(for="to") До
                                                 input.input__control.input__control_number(type="number" id="to" name="to" value="150000")
 
-                        article.ad.ad_third.section
-                            .ad__container.container
-                                .ad__wrapper.wrapper
-                                    h3.ad__title(tabindex="0") Оксфорд 1950
-                                    p.ad__desc(tabindex="0") Новая коллекция изысканных кресел
-                                    button.ad__btn.btn-reset
+                        article.ad-third.ad.section
+                            .ad-third__container.container
+                                .ad-third__wrapper.wrapper
+                                    h3.ad-third__title(tabindex="0") Оксфорд 1950
+                                    p.ad-third__desc(tabindex="0") Новая коллекция изысканных кресел
+                                    button.ad-third__btn.btn-reset
                                         span В&nbsp;Каталог
                                         svg.icon.icon-arrow(width="22" height="22" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg")
                                             g(clip-path="url(#clip0_1_927)")

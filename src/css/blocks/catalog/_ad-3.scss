@@ -1,11 +1,11 @@
-.ad_third {
+.ad-third {
   margin: 0;
 
-  .ad__container {
+  &__container {
     padding: 0;
   }
 
-  .ad__wrapper {
+  &__wrapper {
     @include card();
     padding-top: 210px;
     background-image: url('../img/catalog/ad/ad-lg.webp');
@@ -14,7 +14,7 @@
     background-color: $background-dark-color;
   }
 
-  .ad__title {
+  &__title {
     margin: 0;
     font-family: $third-family;
     font-size: 24px;
@@ -22,14 +22,14 @@
     color: $ad-title-color;
   }
 
-  .ad__desc {
+  &__desc {
     max-width: 180px;
     font-size: 16px;
     font-weight: 400;
     color: $text-grey-color;
   }
 
-  .ad__btn {
+  &__btn {
     position: relative;
     display: flex;
     align-items: center;

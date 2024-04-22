@@ -1,13 +1,13 @@
-.ad_first {
+.ad-first {
   @include ad();
   background-image: url('../img/home/ad/ad-1-lg.webp');
   background-color: $background-grey-color;
 
-  .ad__wrapper {
+  &__wrapper {
     padding: 85px 0 80px;
   }
 
-  .ad__title {
+  &__title {
     margin: 0;
     margin-bottom: 50px;
     max-width: 500px;
@@ -20,7 +20,7 @@
   @media (max-width: 1366px) {
     background-image: url('../img/home/ad/ad-1-md.webp');
 
-    .ad__title {
+    &__title {
       line-height: 130%;
     }
   }
@@ -33,18 +33,18 @@
     margin-bottom: 163px;
     background-image: url('../img/home/ad/ad-1-xs.webp');
 
-    .ad__wrapper {
+    &__wrapper {
       position: relative;
       padding: 30px 0 127px;
     }
 
-    .ad__title {
+    &__title {
       margin: 0;
       max-width: 235px;
       font-size: 20px;
     }
 
-    .ad__btn {
+    &__btn {
       position: absolute;
       right: 0;
       bottom: -95px;
