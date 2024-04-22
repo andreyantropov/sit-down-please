@@ -11,13 +11,13 @@ html(lang="ru")
     link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap")
     link(rel="stylesheet" href="css/main.css")
   body
-    include ./templates/_header.pug
+    include ./shared/_header.pug
 
     main.main
       article.ad.ad_first.section
         .ad__container.container
           .ad__wrapper.wrapper
-            h3.ad__title Скидка&nbsp;15% на&nbsp;первую покупку
+            h3.ad__title(tabindex="0") Скидка&nbsp;15% на&nbsp;первую покупку
             button.ad__btn.btn-reset.primary-btn Получить!
 
       section.offers.section
@@ -36,7 +36,7 @@ html(lang="ru")
                         source(srcset=card.srcSm, media=card.mediaSm)
                         source(srcset=card.srcMd, media=card.mediaMd)
                         img.offer__img(src=card.srcLg, alt="Изображение товара")
-                      h3.offer__title #{card.name}
+                      h3.offer__title(tabindex="0") #{card.name}
                       span.offer__price #{card.price}
                       del.offer__price.offer__price_old #{card.oldPrice}
                       button.offer__btn.btn-reset.outline-btn Купить
@@ -49,7 +49,7 @@ html(lang="ru")
                         source(srcset=card.srcSm, media=card.mediaSm)
                         source(srcset=card.srcMd, media=card.mediaMd)
                         img.offer__img(src=card.srcLg, alt="Изображение товара")
-                      h3.offer__title #{card.name}
+                      h3.offer__title(tabindex="0") #{card.name}
                       span.offer__price #{card.price}
                       del.offer__price.offer__price_old #{card.oldPrice}
                       button.offer__btn.btn-reset.outline-btn Купить
@@ -68,8 +68,8 @@ html(lang="ru")
       article.ad.ad_second.section
         .ad__container.container
           .ad__wrapper.wrapper
-            h3.ad__title Оксфорд 1950
-            p.ad__desc Новая коллекция изысканных кресел
+            h3.ad__title(tabindex="0") Оксфорд 1950
+            p.ad__desc(tabindex="0") Новая коллекция изысканных кресел
             button.ad__btn.btn-reset.primary-btn Ознакомиться
 
       section.categories.section
@@ -85,7 +85,7 @@ html(lang="ru")
                       each subcategory in card.subcategories
                         li.category__item
                           a.category__link(href="#")  #{subcategory.name}
-                    h3.category__title #{card.name}
+                    h3.category__title(tabindex="0") #{card.name}
                     picture.category__pic
                       source(srcset=card.srcXs, media=card.mediaXs)
                       source(srcset=card.srcSm, media=card.mediaSm)
@@ -97,7 +97,7 @@ html(lang="ru")
                         g(clip-path="url(#clip0_1_927)")
                           circle.circle(cx="16" cy="16" r="15" stroke-width="2")
                           path.path(d="M14 11L19 16L14 21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
-                        defs 
+                        defs
                           clipPath(id="clip0_1_927")
                             rect(width="32" height="32" fill="white")
 
@@ -142,5 +142,5 @@ html(lang="ru")
               source(srcset="img/home/subscription/subscription-md.webp" media="(max-width: 1366px)")
               img.subscription__img(src="img/home/subscription/subscription-lg.webp" alt="" aria-hidden="true")
 
-    include ./templates/_footer.pug
+    include ./shared/_footer.pug
 

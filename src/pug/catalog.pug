@@ -12,16 +12,16 @@ html(lang="ru")
         link(rel="stylesheet" href="css/main.css")
     body
         - var input =  [{ title: "Главная", href: "#" }, { title: "Каталог", href: "#" }, { title: "Диваны", href: "#" }, { title: "Прямые диваны", href: "#" }]
-        include ./templates/_header.pug
+        include ./shared/_header.pug
 
         main.main
             .container
                 .wrapper.catalog-wrapper
                     aside.aside
-                        .filter 
-                            .filter__container.container 
-                                .filter__wrapper.wrapper 
-                                    h3.filter__title.title Фильтровать&nbsp;по: 
+                        .filter
+                            .filter__container.container
+                                .filter__wrapper.wrapper
+                                    h3.filter__title.title Фильтровать&nbsp;по:
                                     form.filter__form(action="#" method="get")
                                         fieldset.filter__fieldset.filter__fieldset_colors
                                             legend.filter__legend Цвет
@@ -34,7 +34,7 @@ html(lang="ru")
                                         fieldset.filter__fieldset.filter__fieldset_category
                                             legend.filter__legend Категория
                                             - var categories = [{ id: "sofas", name: "Диваны", isSelected: true }, { id: "armchairs", name: "Кресла", isSelected: false }]
-                                            each category in categories 
+                                            each category in categories
                                                 .filter__input.input.input_checkbox
                                                     label.input__label.input__label_checkbox(for=category.id)
                                                         input.input__control.input__control_checkbox.hidden(type="checkbox" id=category.id name=category.id checked=category.isSelected)
@@ -47,34 +47,34 @@ html(lang="ru")
                                             .filter__input.input.input_number
                                                 label.input__label(for="to") До
                                                 input.input__control.input__control_number(type="number" id="to" name="to" value="150000")
-                    
+
                         article.ad.ad_third.section
                             .ad__container.container
                                 .ad__wrapper.wrapper
-                                    h3.ad__title Оксфорд 1950
-                                    p.ad__desc Новая коллекция изысканных кресел
+                                    h3.ad__title(tabindex="0") Оксфорд 1950
+                                    p.ad__desc(tabindex="0") Новая коллекция изысканных кресел
                                     button.ad__btn.btn-reset
                                         span В&nbsp;Каталог
                                         svg.icon.icon-arrow(width="22" height="22" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg")
                                             g(clip-path="url(#clip0_1_927)")
                                             circle.circle(cx="16" cy="16" r="15" stroke-width="2")
                                             path.path(d="M14 11L19 16L14 21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
-                                            defs 
+                                            defs
                                             clipPath(id="clip0_1_927")
                                                 rect(width="32" height="32" fill="white")
 
-                    section.catalog.section 
-                        .catalog__container.container 
-                            .catalog__wrapper.wrapper 
-                                h2.catalog__title.title 
+                    section.catalog.section
+                        .catalog__container.container
+                            .catalog__wrapper.wrapper
+                                h2.catalog__title.title
                                 - var cards = [{ srcLg: "img/catalog/catalogs/catalog-1-lg.webp", srcMd: "img/catalog/catalogs/catalog-1-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/catalog/catalogs/catalog-1-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/catalog/catalogs/catalog-1-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван кожаный \"R-94\"", price: "94 990 руб", rating: "5.0" }, { srcLg: "img/catalog/catalogs/catalog-2-lg.webp", srcMd: "img/catalog/catalogs/catalog-2-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/catalog/catalogs/catalog-2-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/catalog/catalogs/catalog-2-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван апартековый \"T-75\"", price: "69 990 руб", rating: "4.9" }, { srcLg: "img/catalog/catalogs/catalog-3-lg.webp", srcMd: "img/catalog/catalogs/catalog-3-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/catalog/catalogs/catalog-3-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/catalog/catalogs/catalog-3-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван тканевый \"D-31\"", price: "28 490 руб", rating: "4.8" }, { srcLg: "img/catalog/catalogs/catalog-4-lg.webp", srcMd: "img/catalog/catalogs/catalog-4-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/catalog/catalogs/catalog-4-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/catalog/catalogs/catalog-4-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван велюровый \"Y-68\"", price: "22 990 руб", rating: "4.8" }, { srcLg: "img/catalog/catalogs/catalog-5-lg.webp", srcMd: "img/catalog/catalogs/catalog-5-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/catalog/catalogs/catalog-5-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/catalog/catalogs/catalog-5-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван из шинила \"W-95\"", price: "22 990 руб", rating: "4.8" }, { srcLg: "img/catalog/catalogs/catalog-6-lg.webp", srcMd: "img/catalog/catalogs/catalog-6-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/catalog/catalogs/catalog-6-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/catalog/catalogs/catalog-6-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван флоковый \"G-41\"", price: "17 990 руб", rating: "4.8" }, { srcLg: "img/catalog/catalogs/catalog-7-lg.webp", srcMd: "img/catalog/catalogs/catalog-7-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/catalog/catalogs/catalog-7-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/catalog/catalogs/catalog-7-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван шиниловый \"V-43\"", price: "19 990 руб", rating: "4.8" }, { srcLg: "img/catalog/catalogs/catalog-8-lg.webp", srcMd: "img/catalog/catalogs/catalog-8-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/catalog/catalogs/catalog-8-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/catalog/catalogs/catalog-8-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван велюровый \"S-99\"", price: "19 990 руб", rating: "4.7" }, { srcLg: "img/catalog/catalogs/catalog-9-lg.webp", srcMd: "img/catalog/catalogs/catalog-9-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/catalog/catalogs/catalog-9-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/catalog/catalogs/catalog-9-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван из кожзама \"F-85\"", price: "26 990 руб", rating: "4.7" }]
                                 ul.catalog__list.list-reset
                                     each card in cards
                                         li.catalog__item
                                             include ./templates/_product.pug
-                                .catalog__paginator.paginator 
+                                nav.catalog__paginator.paginator
                                     a.paginator__page.paginator__page_active(href="#") 1
                                     a.paginator__page(href="#") 2
                                     a.paginator__page(href="#") 3
 
-        include ./templates/_footer.pug
+        include ./shared/_footer.pug

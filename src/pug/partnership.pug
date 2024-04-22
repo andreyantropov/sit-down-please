@@ -12,7 +12,7 @@ html(lang="ru")
     link(rel="stylesheet" href="css/main.css")
   body
     - var input =  [{ title: "Главная", href: "#" }, { title: "Сотрудничество", href: "#" }]
-    include ./templates/_header.pug
+    include ./shared/_header.pug
 
     main.main
       section.partnership.section
@@ -47,4 +47,4 @@ html(lang="ru")
 
             span.partnership__warning.pen-decoration Срок гарантии на&nbsp;нашу мебель составляет от&nbsp;18&nbsp;до&nbsp;60&nbsp;месяцев
 
-    include ./templates/_footer.pug
+    include ./shared/_footer.pug

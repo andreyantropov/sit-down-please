@@ -114,8 +114,7 @@
           }
 
           &__btn {
-            padding: 0;
-            border: none;
+            @include hidden();
           }
 
           &__pic {
