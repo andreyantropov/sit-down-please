@@ -8,9 +8,9 @@ header.header
                     span +7 (495) 885-45-47
 
             nav.header__nav.header__nav_top.nav
-                - var navigation = [{ title: "О Компании", href: "#" }, { title: "Гарантия и возврат", href: "#" }, { title: "Корпоративным клиентам", href: "#" }, { title: "Дизайн-решение", href: "#" }]
+                - var navigationTop = [{ title: "О Компании", href: "#" }, { title: "Гарантия и возврат", href: "#" }, { title: "Корпоративным клиентам", href: "#" }, { title: "Дизайн-решение", href: "#" }]
                 ul.nav__list.list-reset
-                    each nav in navigation
+                    each nav in navigationTop
                         li.nav__item
                             a.nav__link(href=nav.href) #{nav.title}
 
@@ -18,9 +18,9 @@ header.header
                 img(src="img/logo.png" alt="SitDownPls")
 
             nav.header__nav.header__nav_bottom.nav
-                - var navigation = [{ title: "Каталог", href: "#" }, { title: "Магазины", href: "#" }, { title: "Шоурум", href: "#" }, { title: "Доставка и оплата", href: "#" }, { title: "Дисконт", href: "#" }, { title: "Контакты", href: "#" }]
+                - var navigationBottom = [{ title: "Каталог", href: "#" }, { title: "Магазины", href: "#" }, { title: "Шоурум", href: "#" }, { title: "Доставка и оплата", href: "#" }, { title: "Дисконт", href: "#" }, { title: "Контакты", href: "#" }]
                 ul.nav__list.list-reset
-                    each nav in navigation
+                    each nav in navigationBottom
                         li.nav__item
                             a.nav__link(href=nav.href) #{nav.title}
 
@@ -46,8 +46,8 @@ header.header
                         use(xlink:href="img/sprite.svg#cart")
 
             nav.header__breadcrumbs.breadcrumbs
-                - var navigation = input || []
+                - var navigationBreadcrumbs = input || []
                 ul.breadcrumbs__list.list-reset
-                    each nav in navigation
+                    each nav in navigationBreadcrumbs
                         li.breadcrumbs__item
                             a.breadcrumbs__link(href=nav.href) #{nav.title}

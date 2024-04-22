@@ -113,3 +113,24 @@
     line-height: 100%;
   }
 }
+
+@mixin rating {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  padding: 10px 20px 10px 40px;
+  font-size: 16px;
+  color: $secondary-color;
+  background-size: 20%;
+  background-position: 30% 40%;
+  background-repeat: no-repeat;
+
+  @media (max-width: 576px) {
+    &__rating {
+      top: 5px;
+      left: 0;
+      font-size: 12px;
+      background-size: 15%;
+    }
+  }
+}

@@ -14,12 +14,12 @@ footer.footer
 
             .footer__column.footer__column_nav
                 nav.footer__nav.nav
-                    - var information = [{ name: "О нас", items: [{ name: "О компании" }, { name: "Блог" }] }, { name: "Услуги", items: [{ name: "Доставка" }, { name: "Рассрочка и кредит" }, { name: "Сборка и установка" }] }, { name: "Связь с нами", items: [{name: "Обратная связь"}, { name: "Контакты" }] }, { name: "Сотрудничество", items: [{ name: "Поставщикам" }, { name: "Оптовикам" }, { name: "Карьера" }] }]
+                    - var navigation = [{ name: "О нас", items: [{ name: "О компании" }, { name: "Блог" }] }, { name: "Услуги", items: [{ name: "Доставка" }, { name: "Рассрочка и кредит" }, { name: "Сборка и установка" }] }, { name: "Связь с нами", items: [{name: "Обратная связь"}, { name: "Контакты" }] }, { name: "Сотрудничество", items: [{ name: "Поставщикам" }, { name: "Оптовикам" }, { name: "Карьера" }] }]
                     ul.nav__list.list-reset
-                        each info in information
+                        each nav in navigation
                             li.nav__category
-                                h4.nav__title #{info.name}
+                                h4.nav__title #{nav.name}
                                 ul.nav__items-list.list-reset
-                                    each item in info.items
+                                    each item in nav.items
                                         li.nav__item
                                             a.nav__link(href="#")  #{item.name}

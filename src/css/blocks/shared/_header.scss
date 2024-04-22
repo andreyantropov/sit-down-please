@@ -9,7 +9,7 @@
     grid-template-areas:
       "address address . . . nav-top nav-top nav-top nav-top nav-top nav-top nav-top"
       "logo logo . nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom"
-      "form form form form form form form form form form user user"
+      "search search search search search search search search search search user user"
       "breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs";
 
     &::before {
@@ -41,7 +41,7 @@
   }
 
   &__form {
-    grid-area: form;
+    grid-area: search;
   }
 
   &__user {
@@ -323,7 +323,7 @@
         "address address . . . . . ."
         "nav-top nav-top nav-top nav-top nav-top nav-top user user"
         "logo logo nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom"
-        "form form form form form form  . ."
+        "search search search search search search  . ."
         "breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs";
 
       &::before {
@@ -353,7 +353,7 @@
         "nav-top nav-top nav-top nav-top nav-top nav-top"
         "logo logo . . user user"
         "nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom"
-        "form form form form form form"
+        "search search search search search search"
         "breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs";
 
       &::before {
@@ -378,20 +378,26 @@
     }
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     &__wrapper {
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: 55px 45px 25px 55px 20px;
       grid-template-areas:
-        ". logo logo logo"
+        "logo logo logo logo"
         "address address address user"
         "nav-bottom nav-bottom nav-bottom nav-bottom"
-        "form form form form"
+        "search search search search"
         "breadcrumbs breadcrumbs breadcrumbs breadcrumbs";
 
       &::before {
         top: 0;
       }
+    }
+
+    &__logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .nav {
@@ -408,8 +414,8 @@
 
     .search {
       .input__control {
-        background-size: 7%;
-        background-position: 10% 50%;
+        background-size: 5%;
+        background-position: 3% 50%;
       }
 
 
@@ -420,6 +426,15 @@
 
     &__breadcrumbs {
       display: none;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .search {
+      .input__control {
+        background-size: 8%;
+        background-position: 3.5% 50%;
+      }
     }
   }
 }

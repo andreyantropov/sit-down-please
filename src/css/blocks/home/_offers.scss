@@ -40,52 +40,52 @@
       display: block;
     }
   }
-}
 
-.offer {
-  @include card();
+  .offer {
+    @include card();
 
-  &__sale {
-    position: absolute;
-    top: 25px;
-    left: 0;
-    padding: 10px 20px;
-    min-width: 90px;
-    font-size: 14px;
-    font-weight: 700;
-    text-align: center;
-    color: $text-light-color;
-    background-color: $secondary-color;
-    clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
-  }
+    &__sale {
+      position: absolute;
+      top: 25px;
+      left: 0;
+      padding: 10px 20px;
+      min-width: 90px;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+      color: $text-light-color;
+      background-color: $secondary-color;
+      clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+    }
 
-  &__pic {
-    margin-bottom: 15px;
-  }
+    &__pic {
+      margin-bottom: 15px;
+    }
 
-  &__img {
-    height: 205px;
-    object-fit: contain;
-  }
+    &__img {
+      height: 205px;
+      object-fit: contain;
+    }
 
-  &__price {
-    margin-right: 20px;
-    color: $secondary-color;
-  }
+    &__price {
+      margin-right: 20px;
+      color: $secondary-color;
+    }
 
-  &__price_old {
-    color: $text-grey-color;
-  }
+    &__price_old {
+      color: $text-grey-color;
+    }
 
-  &__scheme {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-  }
-
-  @media (max-width: 1366px) {
     &__scheme {
-      display: none;
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+    }
+
+    @media (max-width: 1366px) {
+      &__scheme {
+        display: none;
+      }
     }
   }
 }

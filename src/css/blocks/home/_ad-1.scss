@@ -1,6 +1,7 @@
 .ad_first {
   @include ad();
   background-image: url('../img/home/ad/ad-1-lg.webp');
+  background-color: $background-grey-color;
 
   .ad__wrapper {
     padding: 85px 0 80px;
