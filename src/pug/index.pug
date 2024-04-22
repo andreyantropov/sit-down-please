@@ -35,7 +35,7 @@ html(lang="ru")
                         source(srcset=card.srcXs, media=card.mediaXs)
                         source(srcset=card.srcSm, media=card.mediaSm)
                         source(srcset=card.srcMd, media=card.mediaMd)
-                        img.offer__img(src=card.srcLg, alt="Изображение товара")
+                        img.offer__img(src=card.srcLg, alt="Изображение товара" loading="lazy")
                       h3.offer__title(tabindex="0") #{card.name}
                       span.offer__price #{card.price}
                       del.offer__price.offer__price_old #{card.oldPrice}
@@ -48,12 +48,12 @@ html(lang="ru")
                         source(srcset=card.srcXs, media=card.mediaXs)
                         source(srcset=card.srcSm, media=card.mediaSm)
                         source(srcset=card.srcMd, media=card.mediaMd)
-                        img.offer__img(src=card.srcLg, alt="Изображение товара")
+                        img.offer__img(src=card.srcLg, alt="Изображение товара" loading="lazy")
                       h3.offer__title(tabindex="0") #{card.name}
                       span.offer__price #{card.price}
                       del.offer__price.offer__price_old #{card.oldPrice}
                       button.offer__btn.btn-reset.outline-btn Купить
-                      img.offer__scheme(src="img/home/offers/offer-2-scheme-lg.webp" alt="Схема товара")
+                      img.offer__scheme(src="img/home/offers/offer-2-scheme-lg.webp" alt="Схема товара" loading="lazy")
 
       section.rated.section
         .rated__container.container
@@ -90,7 +90,7 @@ html(lang="ru")
                       source(srcset=card.srcXs, media=card.mediaXs)
                       source(srcset=card.srcSm, media=card.mediaSm)
                       source(srcset=card.srcMd, media=card.mediaMd)
-                      img.category__img(src=card.srcLg, alt="Пример товара из категории")
+                      img.category__img(src=card.srcLg, alt="Пример товара из категории" loading="lazy")
                     button.category__btn.btn-reset
                       span В&nbsp;Каталог
                       svg.icon.icon-arrow(width="22" height="22" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg")
@@ -140,7 +140,7 @@ html(lang="ru")
               source(srcset="img/home/subscription/subscription-xs.webp" media="(max-width: 576px)")
               source(srcset="img/home/subscription/subscription-sm.webp" media="(max-width: 992px)")
               source(srcset="img/home/subscription/subscription-md.webp" media="(max-width: 1366px)")
-              img.subscription__img(src="img/home/subscription/subscription-lg.webp" alt="" aria-hidden="true")
+              img.subscription__img(src="img/home/subscription/subscription-lg.webp" alt="" loading="lazy" aria-hidden="true")
 
     include ./shared/_footer.pug
 
