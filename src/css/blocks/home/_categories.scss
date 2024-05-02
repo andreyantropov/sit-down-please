@@ -210,9 +210,15 @@
         transition: color 0.3s, opacity 0.3s;
       }
 
-      .circle,
-      .path {
-        transition: fill 0.3s, stroke 0.3s;
+      .icon-container {
+        padding: 0 8px;
+        border: 2px solid $primary-color;
+        border-radius: 50%;
+        transition: border 0.3s, background-color 0.3s;
+      }
+
+      .icon-arrow {
+        transform: translateY(2px);
       }
 
       &:focus {
@@ -220,12 +226,11 @@
           opacity: 1;
         }
 
-        .circle {
-          fill: $primary-color;
-          stroke: $primary-color;
+        .icon-container {
+          background-color: $primary-color;
         }
 
-        .path {
+        .icon-arrow {
           stroke: $text-light-color;
         }
       }
@@ -235,13 +240,12 @@
           &::after {
             opacity: 1;
           }
-
-          .circle {
-            fill: $primary-light-color;
-            stroke: $primary-color;
+  
+          .icon-container {
+            background-color: $primary-light-color;
           }
-
-          .path {
+  
+          .icon-arrow {
             stroke: $text-light-color;
           }
         }
@@ -251,16 +255,16 @@
         color: $primary-dark-color;
 
         &::after {
-          background-color: $primary-dark-color;
           opacity: 1;
+          background-color: $primary-dark-color;
         }
 
-        .circle {
-          fill: $primary-dark-color;
-          stroke: $primary-dark-color;
+        .icon-container {
+          border: 2px solid $primary-dark-color;
+          background-color: $primary-dark-color;
         }
 
-        .path {
+        .icon-arrow {
           stroke: $text-light-color;
         }
       }
