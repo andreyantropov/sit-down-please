@@ -47,11 +47,12 @@ html(lang="ru")
                   img.schemes__img(src="img/card/schemes/scheme-2-lg.webp", alt="Схема дивана после разложения" loading="lazy")
             .product-card__characteristics.characteristics
               - var data = [{ key: "Гарантия", value: "18 месяцев" }, { key: "Артикул", value: "AAA41269004" }, { key: "Длина", value: "163 см" }, { key: "Высота", value: "90 см" }, { key: "Глубина", value: "108 см" }, { key: "Спальное место", value: "200 см х 125 см" }, { key: "Высота посадки", value: "45 см" }, { key: "Механизм", value: "Опорный" }, { key: "Тип обивки", value: "Рогожка" }, { key: "Цвет", value: "Синий" }, { key: "Наполнитель", value: "Независимый пружинный блок" }, { key: "Материал каркаса", value: "Металл. рама с дерев. латами" }, { key: "Количество мест", value: "Двухместные" }, { key: "Категория", value: "Прямые тканевые диваны" }, { key: "Возврат", value: "Условия" }]
-                ul.characteristics__list.list-reset
-                  each dt in data
-                    li.characteristics__item.characteristic
-                      span.characteristic__key #{dt.key}
-                      span.characteristic__value #{dt.value}
+              table.characteristics__table
+                each dt in data
+                  tr.characteristics__item.characteristic
+                    th.characteristic__key
+                      span.characteristic__name #{dt.key}
+                    td.characteristic__value #{dt.value}
 
       section.similar.section
         .similar__container.container

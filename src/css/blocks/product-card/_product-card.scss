@@ -91,14 +91,17 @@
     &__key {
       @include characterictic();
       color: $text-grey-color;
-      white-space: nowrap;
-      overflow: hidden;
+      display: flex;
+
+      .characteristic__name {
+        flex: 0 0 auto;
+      }
 
       &::after {
-        content: '........................................................................................................................................................................................................................................................................................................................................';
-        display: inline;
-        white-space: nowrap;
-        overflow: hidden;
+        content: "";
+        flex: 1;
+        border-bottom: 1px dashed $text-grey-color;
+        transform: translateY(-2px);
       }
     }
 
