@@ -5,7 +5,7 @@ const del = require('del');
 const browserSync = require('browser-sync').create();
 const svgSprite = require('gulp-svg-sprite');
 const sourcemaps = require('gulp-sourcemaps');
-const image = require('gulp-image');
+const image = require('gulp-imagemin');
 const concat = require('gulp-concat');
 const sass = require('gulp-sass')(require('sass'));
 const pug = require('gulp-pug');
@@ -41,7 +41,9 @@ const styles = () => {
 
 const scripts = () => {
   return src(
-    ['./src/js/**/*.js', './src/js/main.js'])
+    ['./src/js/**/*.js', './src/js/main.js'], {
+      allowEmpty: true,
+    })
     .pipe(sourcemaps.init())
     .pipe(babel({
       presets: ['@babel/env']
