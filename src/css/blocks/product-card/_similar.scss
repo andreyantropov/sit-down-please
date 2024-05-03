@@ -3,7 +3,16 @@
     @include cardList();
   }
 
+  &__title {
+    margin-bottom: 35px;
+  }
+
   @media (max-width: 1366px) {
+    &__title {
+      margin-bottom: 30px;
+      font-size: 24px;
+    }
+
     &__item {
       &:nth-child(4) {
         display: none;
