@@ -17,16 +17,16 @@
     transition: border 0.3s, color 0.3s, background-color 0.3s;
 
     &:focus {
-      border: 2px solid $background-dark-grey-color;
+      border: 2px solid $primary-color;
       outline: none;
-      background-color: $background-dark-grey-color;
+      background-color: $primary-lighter-color;
     }
 
     @media (any-hover: hover) {
       &:hover {
-        border: 2px solid $primary-color;
+        border: 2px solid $background-dark-grey-color;
         outline: none;
-        background-color: $primary-lighter-color;
+        background-color: $background-dark-grey-color;
       }
     }
 
@@ -64,13 +64,13 @@
   }
 
   &__control_checkbox:focus~.custom-checkbox {
-    outline: 1px solid $primary-color;
-    outline-offset: 5px;
+    outline: none;
   }
 
   @media (any-hover: hover) {
     &__control_checkbox:hover~.custom-checkbox {
-      outline: none;
+      outline: 1px solid $primary-color;
+      outline-offset: 5px;
     }
   }
 
@@ -133,11 +133,12 @@
     }
 
     &:focus {
+      outline: none;
       color: $primary-light-color;
     }
 
     &:focus::after {
-      background-color: $primary-light-color;
+      background-color: $primary-color;
     }
 
     @media (any-hover: hover) {
@@ -146,7 +147,7 @@
       }
 
       &:hover::after {
-        background-color: $primary-color;
+        background-color: $primary-light-color;
       }
     }
 
@@ -168,13 +169,14 @@
 
     &:focus {
       border: 2px solid $primary-color;
-      background-color: transparent;
+      outline: none;
+      background-color: $primary-lighter-color;
     }
 
     @media (any-hover: hover) {
       &:hover {
         border: 2px solid $primary-color;
-        background-color: $primary-lighter-color;
+        background-color: transparent;
       }
     }
 

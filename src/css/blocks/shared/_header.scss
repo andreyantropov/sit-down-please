@@ -64,21 +64,22 @@
       transition: color 0.3s, background-color 0.3s;
 
       &:focus {
-        color: $secondary-light-color;
+        outline: none;
+        color: $secondary-color;
+        background-color: $secondary-lighter-color;
       }
 
       &:focus .icon-phone {
-        fill: $secondary-light-color;
+        fill: $secondary-color;
       }
 
       @media (any-hover: hover) {
         &:hover {
-          color: $secondary-color;
-          background-color: $secondary-lighter-color;
+          color: $secondary-light-color;
         }
 
         &:hover .icon-phone {
-          fill: $secondary-color;
+          fill: $secondary-light-color;
         }
       }
 
@@ -109,13 +110,14 @@
       transition: color 0.3s, background-color 0.3s;
 
       &:focus {
+        outline: none;
         color: $primary-color;
+        background-color: $primary-light-color;
       }
 
       @media (any-hover: hover) {
         &:hover {
           color: $primary-color;
-          background-color: $primary-light-color;
         }
       }
 
@@ -133,13 +135,14 @@
       transition: color 0.3s, background-color 0.3s;
 
       &:focus {
+        outline: none;
         color: $primary-color;
+        background-color: $primary-light-color;
       }
 
       @media (any-hover: hover) {
         &:hover {
           color: $primary-color;
-          background-color: $primary-light-color;
         }
       }
 
@@ -171,8 +174,10 @@
       }
 
       &:focus {
+        outline: none;
+
         .circle {
-          fill: $primary-color;
+          fill: $primary-light-color;
           stroke: $primary-color;
         }
 
@@ -184,7 +189,7 @@
       @media (any-hover: hover) {
         &:hover {
           .circle {
-            fill: $primary-light-color;
+            fill: $primary-color;
             stroke: $primary-color;
           }
 
@@ -221,20 +226,21 @@
       transition: background-color 0.3s;
 
       &:focus {
+        outline: none;
+        background-color: $primary-light-color;
 
         .icon-user,
         .icon-cart {
-          fill: $primary-light-color;
+          fill: $text-light-color;
         }
       }
 
       @media (any-hover: hover) {
         &:hover {
-          background-color: $primary-light-color;
 
           .icon-user,
           .icon-cart {
-            fill: $text-light-color;
+            fill: $primary-light-color;
           }
         }
       }
@@ -283,13 +289,14 @@
       color: $text-grey-color;
 
       &:focus {
+        outline: none;
         color: $primary-color;
+        background-color: $primary-light-color;
       }
 
       @media (any-hover: hover) {
         &:hover {
           color: $primary-color;
-          background-color: $primary-light-color;
         }
       }
 

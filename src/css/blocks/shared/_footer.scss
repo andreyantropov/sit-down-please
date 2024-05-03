@@ -41,25 +41,27 @@
       transition: background-color 0.3s;
 
       &:focus {
+        outline: none;
+        background-color: $primary-light-color;
 
         .icon-vk,
         .icon-ok {
-          fill: $primary-color;
+          fill: $text-light-color;
         }
       }
 
       @media (any-hover: hover) {
         &:hover {
-          background-color: $primary-light-color;
 
           .icon-vk,
           .icon-ok {
-            fill: $text-light-color;
+            fill: $primary-color;
           }
         }
       }
 
       &:active {
+
         .icon-vk,
         .icon-ok {
           fill: $primary-dark-color;
@@ -90,13 +92,14 @@
       transition: color 0.3s, background-color 0.3s;
 
       &:focus {
+        outline: none;
         color: $primary-color;
+        background-color: $primary-light-color;
       }
 
       @media (any-hover: hover) {
         &:hover {
           color: $primary-color;
-          background-color: $primary-light-color;
         }
       }
 

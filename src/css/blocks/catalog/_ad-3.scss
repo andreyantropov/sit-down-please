@@ -66,12 +66,14 @@
     }
 
     &:focus {
+      outline: none;
+
       &::after {
         opacity: 1;
       }
 
       .icon-container {
-        background-color: $primary-color;
+        background-color: $primary-light-color;
       }
 
       .icon-arrow {
@@ -84,11 +86,11 @@
         &::after {
           opacity: 1;
         }
-
+  
         .icon-container {
-          background-color: $primary-light-color;
+          background-color: $primary-color;
         }
-
+  
         .icon-arrow {
           stroke: $text-light-color;
         }
