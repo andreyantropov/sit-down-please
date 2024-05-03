@@ -4,6 +4,7 @@
   }
 
   &__title {
+    margin-bottom: 20px;
     font-size: 18px;
     font-weight: 400;
     line-height: 130%;
@@ -13,7 +14,7 @@
   &__form {
     display: grid;
     grid-template-columns: 1fr;
-    gap: $gap;
+    gap: $gap-sm;
   }
 
   &__fieldset {
@@ -29,8 +30,12 @@
     color: $text-dark-grey-color;
   }
 
+  &__input {
+    margin-bottom: 12px;
+  }
+
   .custom-checkbox {
-    padding-left: 20px;
+    padding-left: 30px;
     font-size: 16px;
     font-weight: 400;
     color: $text-dark-grey-color;
@@ -77,16 +82,22 @@
         "colors categories price price . .";
     }
 
+    &__title {
+      display: none;
+    }
+
     &__fieldset_colors {
       grid-area: colors;
     }
 
-    &__fieldset_categories {
+    &__fieldset_category {
       grid-area: categories;
+      transform: translateX(15px);
     }
 
     &__fieldset_price {
       grid-area: price;
+      transform: translateX(30px);
     }
   }
 
@@ -104,6 +115,15 @@
       grid-template-areas:
         "colors categories"
         "price price";
+      row-gap: 0;
+    }
+
+    &__fieldset_category {
+      transform: translateX(5px);
+    }
+
+    &__fieldset_price {
+      transform: translateX(0);
     }
   }
 }

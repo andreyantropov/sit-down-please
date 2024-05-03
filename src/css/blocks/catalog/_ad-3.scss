@@ -7,7 +7,7 @@
 
   &__wrapper {
     @include card();
-    padding-top: 210px;
+    padding-top: 220px;
     background-image: url('../img/catalog/ad/ad-lg.webp');
     background-position: top center;
     background-repeat: no-repeat;
@@ -16,6 +16,7 @@
 
   &__title {
     margin: 0;
+    margin-bottom: 10px;
     font-family: $third-family;
     font-size: 24px;
     font-weight: 900;
@@ -23,6 +24,7 @@
   }
 
   &__desc {
+    margin: 0;
     max-width: 180px;
     font-size: 16px;
     font-weight: 400;
