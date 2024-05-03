@@ -126,11 +126,9 @@
   background-repeat: no-repeat;
 
   @media (max-width: 576px) {
-    &__rating {
-      top: 5px;
-      left: 0;
-      font-size: 12px;
-      background-size: 15%;
-    }
+    top: 5px;
+    left: 0;
+    font-size: 12px;
+    background-size: 15%;
   }
 }
