@@ -4,8 +4,8 @@
     justify-content: center;
     align-items: center;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 65px 55px 60px 20px;
-    gap: $gap-sm;
+    grid-template-rows: 53px 85px 65px 30px;
+    gap: 0;
     grid-template-areas:
       "address address . . . nav-top nav-top nav-top nav-top nav-top nav-top nav-top"
       "logo logo . nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom"
@@ -325,7 +325,7 @@
   @media (max-width: 1366px) {
     &__wrapper {
       grid-template-columns: repeat(8, 1fr);
-      grid-template-rows: 60px 15px 98px 21px 35px;
+      grid-template-rows: 60px 45px 100px 48px 36px;
       grid-template-areas:
         "address address . . . . . ."
         "nav-top nav-top nav-top nav-top nav-top nav-top user user"
@@ -354,7 +354,7 @@
   @media (max-width: 992px) {
     &__wrapper {
       grid-template-columns: repeat(6, 1fr);
-      grid-template-rows: 60px 15px 100px 2px 90px 2px;
+      grid-template-rows: 60px 46px 66px 77px 60px 37px;
       grid-template-areas:
         "address address . . . ."
         "nav-top nav-top nav-top nav-top nav-top nav-top"
@@ -374,6 +374,18 @@
       }
     }
 
+    &__logo {
+      align-self: flex-end;
+    }
+
+    &__user {
+      align-self: flex-end;
+    }
+
+    &__form {
+      align-self: flex-end;
+    }
+
     .search {
       .input__control {
         padding: 15px 70px 15px 56px;
@@ -388,7 +400,7 @@
   @media (max-width: 767px) {
     &__wrapper {
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: 55px 45px 25px 55px 20px;
+      grid-template-rows: 55px 74px 24px 90px 18px;
       grid-template-areas:
         "logo logo logo logo"
         "address address address user"
@@ -399,6 +411,18 @@
       &::before {
         top: 0;
       }
+    }
+
+    &__logo {
+      align-self: center;
+    }
+
+    &__user {
+      align-self: center;
+    }
+
+    &__form {
+      align-self: center;
     }
 
     &__logo {
