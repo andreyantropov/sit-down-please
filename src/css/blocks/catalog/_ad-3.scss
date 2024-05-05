@@ -8,6 +8,7 @@
   &__wrapper {
     @include card();
     padding-top: 220px;
+    padding-bottom: 30px;
     background-image: url('../img/catalog/ad/ad-lg.webp');
     background-position: top center;
     background-repeat: no-repeat;
@@ -88,11 +89,11 @@
         &::after {
           opacity: 1;
         }
-  
+
         .icon-container {
           background-color: $primary-color;
         }
-  
+
         .icon-arrow {
           stroke: $text-light-color;
         }

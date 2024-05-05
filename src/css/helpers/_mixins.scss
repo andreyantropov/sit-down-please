@@ -54,8 +54,10 @@
 @mixin card {
   position: relative;
   padding: 30px;
+  padding-bottom: 135px;
   padding-top: 75px;
   border-radius: 10px;
+  height: 100%;
   background-color: $background-grey-color;
 
   &__title {
@@ -69,6 +71,9 @@
   }
 
   &__price {
+    position: absolute;
+    bottom: 90px;
+    left: 30px;
     display: inline-block;
     margin-bottom: 20px;
     font-size: 16px;
@@ -78,6 +83,9 @@
   }
 
   &__btn {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
     padding: 19px 35px;
     border: 2px solid $primary-color;
     border-radius: 10px;

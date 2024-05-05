@@ -151,11 +151,13 @@
   .category {
     @include card-2();
     padding-top: 30px;
+    padding-bottom: 30px;
 
     &__list {
       display: flex;
       gap: $gap-sm;
       margin-bottom: 10px;
+      overflow: scroll;
     }
 
     &__link {
@@ -189,6 +191,8 @@
 
     &__btn {
       position: relative;
+      bottom: 0;
+      left: 0;
       display: flex;
       align-items: center;
       gap: 5px;
@@ -225,7 +229,7 @@
 
       &:focus {
         outline: none;
-        
+
         &::after {
           opacity: 1;
         }
@@ -244,11 +248,11 @@
           &::after {
             opacity: 1;
           }
-  
+
           .icon-container {
             background-color: $primary-color;
           }
-  
+
           .icon-arrow {
             stroke: $text-light-color;
           }

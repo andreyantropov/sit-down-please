@@ -98,6 +98,7 @@
     &__list {
       display: flex;
       justify-content: space-between;
+      overflow: scroll;
     }
 
     &__link {
@@ -220,6 +221,7 @@
     display: flex;
     justify-content: flex-end;
     gap: 20px;
+    overflow: scroll;
 
     &__link {
       padding: 5px;
