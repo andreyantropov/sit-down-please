@@ -5,7 +5,7 @@ article.product
         source(srcset=card.srcSm, media=card.mediaSm)
         source(srcset=card.srcMd, media=card.mediaMd)
         img.product__img(src=card.srcLg, alt="Изображение товара" loading="lazy")
-    h3.product__title(tabindex="0") #{card.name}
+    h3.product__title #{card.name}
     span.product__price #{card.price}
     del.product__price.product__price_old #{card.oldPrice}
     button.product__btn.btn-reset.outline-btn Купить

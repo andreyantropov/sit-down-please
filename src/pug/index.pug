@@ -17,7 +17,7 @@ html(lang="ru")
       article.ad-first.ad.section
         .ad-first__container.container
           .ad-first__wrapper.wrapper
-            h3.ad-first__title(tabindex="0") Скидка&nbsp;15% на&nbsp;первую покупку
+            h3.ad-first__title Скидка&nbsp;15% на&nbsp;первую покупку
             button.ad-first__btn.btn-reset.primary-btn Получить!
 
       section.offers.section
@@ -36,7 +36,7 @@ html(lang="ru")
                         source(srcset=card.srcSm, media=card.mediaSm)
                         source(srcset=card.srcMd, media=card.mediaMd)
                         img.offer__img(src=card.srcLg, alt="Изображение товара" loading="lazy")
-                      h3.offer__title(tabindex="0") #{card.name}
+                      h3.offer__title #{card.name}
                       span.offer__price #{card.price}
                       del.offer__price.offer__price_old #{card.oldPrice}
                       button.offer__btn.btn-reset.outline-btn Купить
@@ -49,7 +49,7 @@ html(lang="ru")
                         source(srcset=card.srcSm, media=card.mediaSm)
                         source(srcset=card.srcMd, media=card.mediaMd)
                         img.offer__img(src=card.srcLg, alt="Изображение товара" loading="lazy")
-                      h3.offer__title(tabindex="0") #{card.name}
+                      h3.offer__title #{card.name}
                       span.offer__price #{card.price}
                       del.offer__price.offer__price_old #{card.oldPrice}
                       button.offer__btn.btn-reset.outline-btn Купить
@@ -68,8 +68,8 @@ html(lang="ru")
       article.ad-second.ad.section
         .ad-second__container.container
           .ad-second__wrapper.wrapper
-            h3.ad-second__title(tabindex="0") Оксфорд 1950
-            p.ad-second__desc(tabindex="0") Новая коллекция изысканных кресел
+            h3.ad-second__title Оксфорд 1950
+            p.ad-second__desc Новая коллекция изысканных кресел
             button.ad-second__btn.btn-reset.primary-btn Ознакомиться
 
       section.categories.section
@@ -85,7 +85,7 @@ html(lang="ru")
                       each subcategory in card.subcategories
                         li.category__item
                           a.category__link(href="#")  #{subcategory.name}
-                    h3.category__title(tabindex="0") #{card.name}
+                    h3.category__title #{card.name}
                     picture.category__pic
                       source(srcset=card.srcXs, media=card.mediaXs)
                       source(srcset=card.srcSm, media=card.mediaSm)
