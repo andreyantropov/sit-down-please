@@ -129,6 +129,10 @@
       margin: 0;
     }
 
+    &__socials {
+      transform: translateX(-45px);
+    }
+
     .nav {
       &__list {
         gap: $gap;
@@ -150,6 +154,10 @@
 
     &__logo {
       margin-bottom: 18px;
+    }
+
+    &__socials {
+      transform: translateX(0);
     }
 
     .nav {

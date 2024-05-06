@@ -125,5 +125,15 @@
     &__fieldset_price {
       transform: translateX(0);
     }
+
+    .custom-checkbox::before {
+      width: 18px;
+      height: 18px;
+    }
+  
+    .custom-checkbox::after {
+      width: 18px;
+      height: 18px;
+    }
   }
 }
