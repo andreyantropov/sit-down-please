@@ -137,6 +137,10 @@
   }
 
   @media (max-width: 576px) {
+    &__wrapper {
+      padding-top: 22px;
+    }
+
     &__column_brand {
       flex-direction: column;
       justify-content: center;
@@ -145,7 +149,7 @@
     }
 
     &__logo {
-      margin-bottom: 10px;
+      margin-bottom: 18px;
     }
 
     .nav {

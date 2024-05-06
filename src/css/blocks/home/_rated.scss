@@ -10,4 +10,8 @@
       display: none;
     }
   }
+
+  @media (max-width: 576px) {
+    margin-bottom: 71px;
+  }
 }

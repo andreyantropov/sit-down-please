@@ -7,7 +7,7 @@
       "description characteristics";
     gap: $gap;
     row-gap: 103px;
-    padding-top: $gap;
+    padding-top: 37px;
   }
 
   &__pic {
@@ -151,6 +151,7 @@
         "description description description description description description description description description description description characteristics characteristics characteristics characteristics characteristics characteristics characteristics characteristics characteristics";
       gap: 42px;
       row-gap: 76px;
+      padding-top: 23px;
     }
 
     .description__desc_last {
@@ -170,6 +171,7 @@
       display: flex;
       flex-direction: column;
       gap: $gap;
+      padding-top: 19px;
     }
 
     &__pic {
@@ -227,6 +229,12 @@
 
     .info {
       margin-bottom: 23px;
+
+      &__rating {
+        top: 0;
+        font-size: 16px;
+        background-size: 25%;
+      }
 
       &__title {
         font-size: 16px;
