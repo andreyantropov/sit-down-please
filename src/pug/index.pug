@@ -93,7 +93,7 @@ html(lang="ru")
                       img.category__img(src=card.srcLg, alt="Пример товара из категории" loading="lazy")
                     button.category__btn.btn-reset
                       span В&nbsp;Каталог
-                      .icon-container
+                      span.icon-container
                         svg.icon.icon-arrow(width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg")
                           use(xlink:href="img/sprite.svg#arrow")
 
@@ -121,7 +121,7 @@ html(lang="ru")
                   input.input__control(type="text" id="name" name="name" placeholder="Как Вас зовут?")
                 .subscription__input.input
                   label.input__label.hidden(for="phone") Введите имя:
-                  input.input__control(type="phone" id="phone" name="phone" placeholder="Ваш телефон")
+                  input.input__control(type="tel" id="phone" name="phone" placeholder="Ваш телефон")
                 .subscription__input.input
                   label.input__label.hidden(for="email") Введите имя:
                   input.input__control(type="email" id="email" name="email" placeholder="Ваш e-mail")

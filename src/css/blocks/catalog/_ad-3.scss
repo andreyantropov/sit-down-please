@@ -1,10 +1,6 @@
 .ad-third {
   margin: 0;
 
-  &__container {
-    padding: 0;
-  }
-
   &__wrapper {
     @include card();
     padding-top: 220px;
@@ -59,6 +55,7 @@
     }
 
     .icon-container {
+      display: block;
       padding: 0 8px;
       border: 2px solid $primary-color;
       border-radius: 50%;
