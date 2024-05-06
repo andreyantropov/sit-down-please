@@ -56,3 +56,55 @@
     background-color: $primary-dark-color;
   }
 }
+
+.link-btn {
+  position: relative;
+  padding: 8px 30px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: $primary-color;
+  transition: color 0.3s;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+    left: 30px;
+    height: 2px;
+    background-color: $primary-color;
+    opacity: 0;
+    transition: background-color 0.3s, opacity 0.3s;
+  }
+
+  &:focus {
+    outline: none;
+    color: $primary-light-color;
+
+    &::after {
+      background-color: $primary-light-color;
+      opacity: 1;
+    }
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: $primary-color;
+
+      &::after {
+        background-color: $primary-color;
+        opacity: 1;
+      }
+    }
+  }
+
+  &:active {
+    color: $primary-dark-color;
+
+      &::after {
+        background-color: $primary-dark-color;
+        opacity: 1;
+      }
+  }
+}

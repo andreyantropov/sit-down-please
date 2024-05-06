@@ -233,6 +233,9 @@
       }
 
       &:focus {
+        border: none;
+        color: $primary-color;
+        background-color: transparent;
         outline: none;
 
         &::after {
@@ -250,6 +253,10 @@
 
       @media (any-hover: hover) {
         &:hover {
+          border: none;
+          color: $primary-color;
+          background-color: transparent;
+
           &::after {
             opacity: 1;
           }
@@ -265,6 +272,8 @@
       }
 
       &:active {
+        border: none;
+        background-color: transparent;
         color: $primary-dark-color;
 
         &::after {

@@ -92,6 +92,24 @@
     font-size: 16px;
     font-weight: 600;
     color: $primary-color;
+
+    &:focus {
+      outline: none;
+      color: $text-light-color;
+      background-color: $primary-light-color;
+    }
+  
+    @media (any-hover: hover) {
+      &:hover {
+        color: $text-light-color;
+        background-color: $primary-color;
+      }
+    }
+  
+    &:active {
+      border: 2px solid $primary-dark-color;
+      background-color: $primary-dark-color;
+    }
   }
 }
 
