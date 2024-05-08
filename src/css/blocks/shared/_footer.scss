@@ -1,0 +1,170 @@
+.footer {
+  position: relative;
+  background-color: $background-dark-grey-color;
+
+  &::after {
+    content: 'SDP®   2011-2021';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: $text-grey-color;
+    text-align: center;
+    background-color: $background-grey-color;
+  }
+
+  &__wrapper {
+    display: flex;
+    padding: 30px 0 45px;
+  }
+
+  &__column_brand {
+    margin-right: auto;
+  }
+
+  &__logo {
+    display: inline-block;
+    margin-bottom: 25px;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 10px;
+  }
+
+  .socials {
+    &__link {
+      padding: 5px;
+      transition: background-color 0.3s;
+
+      &:focus {
+        outline: none;
+        background-color: $primary-light-color;
+
+        .icon-vk,
+        .icon-ok {
+          fill: $text-light-color;
+        }
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+
+          .icon-vk,
+          .icon-ok {
+            fill: $primary-color;
+          }
+        }
+      }
+
+      &:active {
+        background-color: transparent;
+
+        .icon-vk,
+        .icon-ok {
+          fill: $primary-dark-color;
+        }
+      }
+    }
+  }
+
+  .nav {
+    &__list {
+      display: grid;
+      gap: 100px;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__title {
+      margin: 0;
+      margin-bottom: 5px;
+      font-size: 16px;
+      font-weight: 400;
+      color: $text-dark-color;
+    }
+
+    &__link {
+      font-size: 14px;
+      font-weight: 400;
+      color: $text-grey-color;
+      transition: color 0.3s, background-color 0.3s;
+
+      &:focus {
+        outline: none;
+        color: $primary-color;
+        background-color: $primary-light-color;
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: $primary-color;
+        }
+      }
+
+      &:active {
+        color: $primary-dark-color;
+        background-color: transparent;
+      }
+    }
+  }
+
+  @media (max-width: 1366px) {
+    .nav {
+      &__list {
+        gap: 65px;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__column_brand {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+    }
+
+    &__socials {
+      transform: translateX(-45px);
+    }
+
+    .nav {
+      &__list {
+        gap: $gap;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    &__wrapper {
+      padding-top: 22px;
+    }
+
+    &__column_brand {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    &__logo {
+      margin-bottom: 18px;
+    }
+
+    &__socials {
+      transform: translateX(0);
+    }
+
+    .nav {
+      &__list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}

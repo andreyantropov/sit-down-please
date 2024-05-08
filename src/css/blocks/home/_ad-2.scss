@@ -1,0 +1,77 @@
+.ad-second {
+  @include ad();
+  background-image: url('../img/home/ad/ad-2-lg.webp');
+  background-color: $background-grey-color;
+
+  &__wrapper {
+    padding: 155px 0 150px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 5px;
+    font-family: $third-family;
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 120%;
+    color: $ad-title-color;
+  }
+
+  &__desc {
+    margin: 0;
+    margin-bottom: 50px;
+    max-width: 510px;
+    font-size: 48px;
+    font-weight: 400;
+    color: $text-light-color;
+  }
+
+  &__btn {
+    padding: 20px 30px;
+  }
+
+  @media (max-width: 1366px) {
+    background-image: url('../img/home/ad/ad-2-md.webp');
+  }
+
+  @media (max-width: 992px) {
+    background-image: url('../img/home/ad/ad-2-sm.webp');
+    
+    &__title,
+    &__desc,
+    &__btn {
+      transform: translateX(-34px);
+    }
+  }
+
+  @media (max-width: 576px) {
+    margin-bottom: 163px;
+    background-image: url('../img/home/ad/ad-2-xs.webp');
+
+    &__wrapper {
+      position: relative;
+      padding: 30px 80px 60px 0;
+    }
+
+    &__title,
+    &__desc,
+    &__btn {
+      transform: translateX(0);
+    }
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__desc {
+      font-size: 16px;
+    }
+
+    &__btn {
+      position: absolute;
+      right: 0;
+      bottom: -95px;
+      left: 0;
+    }
+  }
+}

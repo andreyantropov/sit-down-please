@@ -1,0 +1,168 @@
+@mixin ghost {
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@mixin hidden() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin btn {
+  display: block;
+  border: 2px solid $primary-color;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border 0.3s, color 0.3s, background-color 0.3s;
+}
+
+@mixin ad {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin cardList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $gap;
+
+  @media (max-width: 1366px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 576px) {
+    gap: $gap-sm;
+  }
+}
+
+@mixin card {
+  position: relative;
+  padding: 30px;
+  padding-bottom: 135px;
+  padding-top: 75px;
+  border-radius: 10px;
+  height: 100%;
+  background-color: $background-grey-color;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 20px;
+    max-width: 230px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 130%;
+    color: $text-dark-color;
+  }
+
+  &__price {
+    position: absolute;
+    bottom: 90px;
+    left: 30px;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+    color: $text-dark-grey-color;
+  }
+
+  &__btn {
+    position: absolute;
+    bottom: 35px;
+    left: 30px;
+    padding: 16px 34px;
+    border: 2px solid $primary-color;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: $primary-color;
+
+    &:focus {
+      outline: none;
+      color: $text-light-color;
+      background-color: $primary-light-color;
+    }
+  
+    @media (any-hover: hover) {
+      &:hover {
+        color: $text-light-color;
+        background-color: $primary-color;
+      }
+    }
+  
+    &:active {
+      border: 2px solid $primary-dark-color;
+      background-color: $primary-dark-color;
+    }
+  }
+}
+
+@mixin card-2 {
+  @include card();
+
+  @media (max-width: 576px) {
+    padding: 15px;
+    padding-bottom: 96px;
+
+    &__title {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    &__price {
+      bottom: 50px;
+      left: 15px;
+    }
+
+    &__btn {
+      bottom: 15px;
+      left: 15px;
+      padding: 8px 24px;
+    }
+  }
+}
+
+@mixin characterictic {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 180%;
+
+  @media (max-width: 992px) {
+    line-height: 100%;
+  }
+}
+
+@mixin rating {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  padding: 10px 20px 10px 40px;
+  font-size: 16px;
+  color: $secondary-color;
+  background-size: 20%;
+  background-position: 30% 40%;
+  background-repeat: no-repeat;
+
+  @media (max-width: 576px) {
+    top: 5px;
+    left: 0;
+    font-size: 12px;
+    background-size: 15%;
+  }
+}
