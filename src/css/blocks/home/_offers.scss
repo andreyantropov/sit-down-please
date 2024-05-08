@@ -1,0 +1,92 @@
+.offers {
+  &__list {
+    @include cardList();
+  }
+
+  &__item:nth-child(2) {
+    grid-column: span 2;
+  }
+
+  &__item:nth-child(4),
+  &__item:nth-child(5),
+  &__item:nth-child(6),
+  &__item:nth-child(7) {
+    display: none;
+  }
+
+  @media (max-width: 1366px) {
+    &__item:nth-child(2) {
+      grid-column: span 1;
+    }
+  }
+
+  @media (max-width: 992px) {
+    &__item:nth-child(3) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 576px) {
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 19px;
+    }
+
+    &__item:nth-child(3),
+    &__item:nth-child(4),
+    &__item:nth-child(5),
+    &__item:nth-child(6),
+    &__item:nth-child(7) {
+      display: block;
+    }
+  }
+
+  .offer {
+    @include card();
+
+    &__sale {
+      position: absolute;
+      top: 25px;
+      left: 0;
+      padding: 10px 20px;
+      min-width: 90px;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+      color: $text-light-color;
+      background-color: $secondary-color;
+      clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+    }
+
+    &__pic {
+      margin-bottom: 15px;
+    }
+
+    &__img {
+      height: 205px;
+      object-fit: contain;
+    }
+
+    &__price {
+      margin-right: 20px;
+      color: $secondary-color;
+    }
+
+    &__price_old {
+      left: 145px;
+      color: $text-grey-color;
+    }
+
+    &__scheme {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+    }
+
+    @media (max-width: 1366px) {
+      &__scheme {
+        display: none;
+      }
+    }
+  }
+}

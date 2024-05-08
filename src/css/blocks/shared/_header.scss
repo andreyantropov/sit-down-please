@@ -1,0 +1,475 @@
+.header {
+  &__wrapper {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 53px 85px 65px 35px;
+    gap: 0;
+    grid-template-areas:
+      "address address . . . nav-top nav-top nav-top nav-top nav-top nav-top nav-top"
+      "logo logo . nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom"
+      "search search search search search search search search search search user user"
+      "breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs";
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: -1;
+      height: 50px;
+      background-color: $background-grey-color;
+    }
+  }
+
+  &__address {
+    grid-area: address;
+  }
+
+  &__nav_top {
+    grid-area: nav-top;
+  }
+
+  &__logo {
+    grid-area: logo;
+  }
+
+  &__nav_bottom {
+    grid-area: nav-bottom;
+  }
+
+  &__form {
+    grid-area: search;
+  }
+
+  &__user {
+    grid-area: user;
+  }
+
+  &__breadcrumbs {
+    grid-area: breadcrumbs;
+  }
+
+  .address {
+    &__phone {
+      display: inline-flex;
+      gap: 5px;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 100%;
+      color: $secondary-color;
+      transition: color 0.3s, background-color 0.3s;
+
+      &:focus {
+        outline: none;
+        color: $secondary-color;
+        background-color: $secondary-lighter-color;
+      }
+
+      &:focus .icon-phone {
+        fill: $secondary-color;
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: $secondary-light-color;
+        }
+
+        &:hover .icon-phone {
+          fill: $secondary-light-color;
+        }
+      }
+
+      &:active {
+        color: $secondary-dark-color;
+        background: transparent;
+      }
+
+      &:active .icon-phone {
+        fill: $secondary-dark-color;
+      }
+    }
+  }
+
+  .nav {
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      overflow: auto;
+    }
+
+    &__link {
+      display: inline-block;
+      padding: 2px 5px;
+      font-size: 16px;
+      font-weight: 400;
+      color: $text-dark-color;
+      white-space: nowrap;
+      transition: color 0.3s, background-color 0.3s;
+
+      &:focus {
+        outline: none;
+        color: $primary-color;
+        background-color: $primary-light-color;
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: $primary-color;
+        }
+      }
+
+      &:active {
+        color: $primary-dark-color;
+        background-color: transparent;
+      }
+    }
+  }
+
+  .header__nav_top {
+    .nav__link {
+      font-size: 14px;
+      color: $text-grey-color;
+      transition: color 0.3s, background-color 0.3s;
+
+      &:focus {
+        outline: none;
+        color: $primary-color;
+        background-color: $primary-light-color;
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: $primary-color;
+        }
+      }
+
+      &:active {
+        color: $primary-dark-color;
+        background-color: transparent;
+      }
+    }
+  }
+
+  .search {
+    position: relative;
+
+    .input__control {
+      padding: 15px 70px 15px 56px;
+      background-size: 2%;
+      background-position: 3% 50%;
+      background-repeat: no-repeat;
+    }
+
+    &__btn {
+      position: absolute;
+      top: 10px;
+      right: 35px;
+
+      .circle,
+      .path {
+        transition: fill 0.3s, stroke 0.3s;
+      }
+
+      &:focus {
+        outline: none;
+
+        .circle {
+          fill: $primary-light-color;
+          stroke: $primary-color;
+        }
+
+        .path {
+          stroke: $text-light-color;
+        }
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+          .circle {
+            fill: $primary-color;
+            stroke: $primary-color;
+          }
+
+          .path {
+            stroke: $text-light-color;
+          }
+        }
+      }
+
+      &:active {
+        .circle {
+          fill: $primary-dark-color;
+          stroke: $primary-dark-color;
+        }
+
+        .path {
+          stroke: $text-light-color;
+        }
+      }
+    }
+
+    .search-decoration {
+      background-image: url('../img/sprite.svg#search');
+    }
+  }
+
+  .user {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    overflow: auto;
+
+    &__link {
+      padding: 5px;
+      transition: background-color 0.3s;
+
+      &:focus {
+        outline: none;
+        background-color: $primary-light-color;
+
+        .icon-user,
+        .icon-cart {
+          fill: $text-light-color;
+        }
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+
+          .icon-user,
+          .icon-cart {
+            fill: $primary-light-color;
+          }
+        }
+      }
+
+      &:active {
+        background-color: transparent;
+
+        .icon-user,
+        .icon-cart {
+          fill: $primary-dark-color;
+        }
+      }
+    }
+
+    &__link_cart {
+      position: relative;
+      padding-left: 10px;
+    }
+
+    &__link_cart::before {
+      content: '0';
+      position: absolute;
+      top: 20%;
+      left: 0;
+      padding: 2px 4px;
+      border-radius: 50%;
+      font-size: 10px;
+      font-weight: 700;
+      line-height: 100%;
+      text-align: center;
+      color: $text-light-color;
+      background-color: $secondary-color;
+    }
+  }
+
+  .breadcrumbs {
+    align-self: flex-end;
+
+    &__list {
+      display: flex;
+      gap: $gap-sm;
+    }
+
+    &__link {
+      position: relative;
+      font-size: 14px;
+      font-weight: 400;
+      color: $text-grey-color;
+
+      &:focus {
+        outline: none;
+        color: $primary-color;
+        background-color: $primary-light-color;
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: $primary-color;
+        }
+      }
+
+      &:active {
+        color: $primary-dark-color;
+        background-color: transparent;
+      }
+    }
+
+    &__link::after {
+      content: '/';
+      position: absolute;
+      top: 2px;
+      right: -10px;
+    }
+
+    &__item:nth-last-child(1) .breadcrumbs__link {
+      color: $primary-color;
+    }
+
+    &__item:nth-last-child(1) .breadcrumbs__link::after {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1366px) {
+    &__wrapper {
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: 60px 45px 100px 48px 45px;
+      grid-template-areas:
+        "address address . . . . . ."
+        "nav-top nav-top nav-top nav-top nav-top nav-top user user"
+        "logo logo nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom"
+        "search search search search search search  . ."
+        "breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs";
+
+      &::before {
+        top: 55px;
+      }
+    }
+
+    .search {
+      .input__control {
+        padding: 15px 56px;
+        background-size: 3%;
+        background-position: 4.2% 50%;
+      }
+
+      &__btn {
+        right: 10px;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    &__wrapper {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: 60px 46px 66px 77px 60px 45px;
+      grid-template-areas:
+        "address address . . . ."
+        "nav-top nav-top nav-top nav-top nav-top nav-top"
+        "logo logo . . user user"
+        "nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom nav-bottom"
+        "search search search search search search"
+        "breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs";
+
+      &::before {
+        top: 55px;
+      }
+    }
+
+    .nav {
+      &__link {
+        font-size: 14px;
+      }
+    }
+
+    &__logo {
+      align-self: flex-end;
+    }
+
+    &__user {
+      align-self: flex-end;
+    }
+
+    &__form {
+      align-self: flex-end;
+    }
+
+    .search {
+      .input__control {
+        padding: 15px 70px 15px 56px;
+      }
+
+      &__btn {
+        right: 30px;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__wrapper {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 55px 74px 24px 90px 18px;
+      grid-template-areas:
+        "logo logo logo logo"
+        "address address user user"
+        "nav-bottom nav-bottom nav-bottom nav-bottom"
+        "search search search search"
+        "breadcrumbs breadcrumbs breadcrumbs breadcrumbs";
+
+      &::before {
+        top: 0;
+      }
+    }
+
+    &__logo {
+      align-self: center;
+    }
+
+    &__user {
+      align-self: center;
+    }
+
+    &__form {
+      align-self: center;
+    }
+
+    &__logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav {
+      width: calc(100% + 15px);
+
+      &__list {
+        overflow: auto;
+      }
+    }
+
+    &__nav_top {
+      display: none;
+    }
+
+    .search {
+      .input__control {
+        background-size: 5%;
+        background-position: 3% 50%;
+      }
+
+
+      &__btn {
+        right: 30px;
+      }
+    }
+
+    &__breadcrumbs {
+      display: none;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .search {
+      .input__control {
+        background-size: 8%;
+        background-position: 3.5% 50%;
+      }
+    }
+  }
+}

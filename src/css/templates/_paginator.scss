@@ -1,0 +1,49 @@
+.paginator {
+  display: flex;
+  gap: $gap-sm;
+
+  &__page {
+    padding: 5px 10px;
+    border: 2px solid $primary-color;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: $primary-color;
+    transition: border 0.3s, color 0.3s, background-color 0.3s;
+
+    &:nth-child(3) {
+      display: none;
+    }
+
+    &:focus {
+      outline: none;
+      color: $text-light-color;
+      background-color: $primary-light-color;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $text-light-color;
+        background-color: $primary-color;
+      }
+    }
+
+    &:active {
+      border: 2px solid $primary-dark-color;
+      background-color: $primary-dark-color;
+    }
+  }
+
+  &__page_active {
+    color: $text-light-color;
+    background-color: $primary-color;
+  }
+
+  @media (max-width: 992px) {
+    &__page {
+      &:nth-child(3) {
+        display: block;
+      }
+    }
+  }
+}

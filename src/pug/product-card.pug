@@ -1,0 +1,69 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="shortcut icon" href="favicon.svg" type="image/x-icon")
+    title SitDownPls - Каталог
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap")
+    link(rel="stylesheet" href="css/main.css")
+  body
+    - var navigationBreadcrumbs =  [{ title: "Главная", href: "#" }, { title: "Каталог", href: "#" }, { title: "Диваны", href: "#" }, { title: "Прямые диваны", href: "#" }, { title: "D-31", href: "#" }]
+    include ./shared/_header.pug
+
+    main.main
+      section.product-card.section
+        .product-card__container.container
+          .product-card__wrapper.wrapper
+            picture.product-card__pic
+              source(srcset="img/card/card/card-xs.webp", media="(max-width: 576px)")
+              source(srcset="img/card/card/card-sm.webp", media="(max-width: 992px)")
+              source(srcset="img/card/card/card-md.webp", media="(max-width: 1366px)")
+              img.product-card__img(src="img/card/card/card-lg.webp", alt="Изображение товара")
+            .product-card__info.info
+              span.info__rating.star-decoration 4.8
+              h2.info__title.title Диван тканевый прямой &laquo;D-31&raquo;
+              span.info__note Мини 120&nbsp;см без ящика Stark синий (Рогожка)
+              span.info__price 28&nbsp;490 руб
+              button.info__buy-btn.btn-reset.primary-btn Купить в&nbsp;один клик
+              button.info__add-btn.btn-reset.link-btn + Добавить в&nbsp;корзину
+            .product-card__description.description
+              h3.description__title Опорный механизм
+              p.description__desc.description__desc_first Опорный механизм напоминает пантограф, к&nbsp;которому добавили дополнительную секцию. У&nbsp;опорного дивана сиденье &laquo;выпрыгивает&raquo; вперёд и&nbsp;вытаскивает вторую часть спального места. Заключительный штрих&nbsp;&mdash; опустить спинку.
+              p.description__desc.description__desc_last Этот механизм не&nbsp;портит пол и&nbsp;не&nbsp;боится ковров. Требуется чуть больше силы, чтобы разложить диван, но&nbsp;подросток справится.
+              .description__schemes.schemes
+                picture.schemes__pic.schemes__pic_left
+                  source(srcset="img/card/schemes/scheme-1-xs.webp", media="(max-width: 576px)")
+                  source(srcset="img/card/schemes/scheme-1-sm.webp", media="(max-width: 992px)")
+                  source(srcset="img/card/schemes/scheme-1-md.webp", media="(max-width: 1366px)")
+                  img.schemes__img(src="img/card/schemes/scheme-1-lg.webp", alt="Структура функционирования опорного механизма" loading="lazy")
+                picture.schemes__pic.schemes__pic_right
+                  source(srcset="img/card/schemes/scheme-2-xs.webp", media="(max-width: 576px)")
+                  source(srcset="img/card/schemes/scheme-2-sm.webp", media="(max-width: 992px)")
+                  source(srcset="img/card/schemes/scheme-2-md.webp", media="(max-width: 1366px)")
+                  img.schemes__img(src="img/card/schemes/scheme-2-lg.webp", alt="Схема дивана после разложения" loading="lazy")
+            .product-card__characteristics.characteristics
+              - var data = [{ key: "Гарантия", value: "18 месяцев" }, { key: "Артикул", value: "AAA41269004" }, { key: "Длина", value: "163 см" }, { key: "Высота", value: "90 см" }, { key: "Глубина", value: "108 см" }, { key: "Спальное место", value: "200 см х 125 см" }, { key: "Высота посадки", value: "45 см" }, { key: "Механизм", value: "Опорный" }, { key: "Тип обивки", value: "Рогожка" }, { key: "Цвет", value: "Синий" }, { key: "Наполнитель", value: "Независимый пружинный блок" }, { key: "Материал каркаса", value: "Металл. рама с дерев. латами" }, { key: "Количество мест", value: "Двухместные" }, { key: "Категория", value: "Прямые тканевые диваны" }, { key: "Возврат", value: "Условия" }]
+              table.characteristics__table
+                each dt in data
+                  tr.characteristics__item.characteristic
+                    th.characteristic__key
+                      span.characteristic__name #{dt.key}
+                    td.characteristic__value #{dt.value}
+
+      section.similar.section
+        .similar__container.container
+          .similar__wrapper.wrapper
+            h2.similar__title.title Похожие товары
+            - var cards = [{ srcLg: "img/card/similar/similar-1-lg.webp", srcMd: "img/card/similar/similar-1-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/card/similar/similar-1-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/card/similar/similar-1-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван велюровый \"R-85\"", price: "34 990 руб", rating: "4.5" }, { srcLg: "img/card/similar/similar-2-lg.webp", srcMd: "img/card/similar/similar-2-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/card/similar/similar-2-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/card/similar/similar-2-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван флоковый \"H-58\"", price: "23 990 руб", rating: "4.4" }, { srcLg: "img/card/similar/similar-3-lg.webp", srcMd: "img/card/similar/similar-3-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/card/similar/similar-3-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/card/similar/similar-3-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван велюровый \"S-44\"", price: "19 990 руб", rating: "4.5" }, { srcLg: "img/card/similar/similar-4-lg.webp", srcMd: "img/card/similar/similar-4-md.webp", mediaMd: "(max-width: 1366px)", srcSm: "img/card/similar/similar-4-sm.webp", mediaSm: "(max-width: 992px)", srcXs: "img/card/similar/similar-4-xs.webp", mediaXs: "(max-width: 576px)", name: "Диван шиниловый \"V-43\"", price: "19 990 руб", rating: "4.8" }]
+            ul.similar__list.list-reset
+              each card in cards
+                li.similar__item
+                  include ./templates/_productCard.pug
+
+    include ./shared/_footer.pug
+
+
